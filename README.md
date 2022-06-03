@@ -1,7 +1,7 @@
 # MATH-SPRINT-GAME
  👉🏻 The user must agree or disagree with the results of math equations in this Math Sprint Game. The amount of time the player spends making decisions is the most important factor in this game. Penalty time is imposed for each wrong answer. When all of the equations have been solved, the final result is displayed. The highest scores are saved and displayed on the home page.
 
- - **[Try The Web Application!](https://amey-thakur.github.io/MATH-SPRINT-GAME)**
+ >**[Try The Web Application!](https://amey-thakur.github.io/MATH-SPRINT-GAME)**
 
 ---
 

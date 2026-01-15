@@ -13,7 +13,7 @@
 //   CONSOLE EASTER EGG 🏃‍♂️
 // =========================================
 console.log(
-    "%c🏃‍♂️ Math Sprint Game",
+    "%c🏃🏻‍♂️ Math Sprint Game",
     "font-size: 24px; font-weight: bold; color: #8b5cf6; text-shadow: 2px 2px 0 #1e1b4b;"
 );
 console.log(

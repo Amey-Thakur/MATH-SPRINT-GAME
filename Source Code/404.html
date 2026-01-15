@@ -1,0 +1,243 @@
+<!--
+    ================================================================
+    Math Sprint Game - 404 Not Found
+    ================================================================
+    Project: Math Sprint Game
+    Description: Custom 404 error page for the Math Sprint Game
+    
+    Created by: Amey Thakur (https://github.com/Amey-Thakur) & Mega Satish (https://github.com/msatmod)
+    Repository: https://github.com/Amey-Thakur/MATH-SPRINT-GAME
+    License: MIT
+    ================================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 | Equation Not Found</title>
+    <meta name="author" content="Amey Thakur & Mega Satish">
+    <meta name="description" content="Error: This equation does not compute. Please return to the game.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-color: #1e1b4b;
+            --text-primary: #f5f3ff;
+            --text-secondary: #c4b5fd;
+            --accent-color: #8b5cf6;
+            --accent-hover: #a78bfa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1e1b4b 0%, #0f0a1e 100%);
+            color: var(--text-primary);
+            font-family: 'Play', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        .error-container {
+            max-width: 700px;
+            padding: 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .error-icon {
+            font-size: 5rem;
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+        }
+
+        .error-code {
+            font-size: 7rem;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 20px;
+            background: linear-gradient(120deg, #8b5cf6, #c4b5fd);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: pulse 3s infinite ease-in-out;
+        }
+
+        .error-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .error-message {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .equation {
+            font-family: monospace;
+            font-size: 1.3rem;
+            background: rgba(139, 92, 246, 0.2);
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .btn-home {
+            background: var(--accent-color);
+            color: white;
+            padding: 14px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+            border: none;
+            font-family: 'Play', sans-serif;
+            font-size: 1rem;
+        }
+
+        .btn-home:hover {
+            transform: translateY(-3px);
+            background: var(--accent-hover);
+            box-shadow: 0 15px 30px rgba(139, 92, 246, 0.4);
+            color: white;
+        }
+
+        .bg-shape {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.3;
+            z-index: 1;
+            animation: float 20s infinite alternate;
+        }
+
+        .shape-1 {
+            width: 300px;
+            height: 300px;
+            background: #8b5cf6;
+            top: -80px;
+            left: -80px;
+        }
+
+        .shape-2 {
+            width: 250px;
+            height: 250px;
+            background: #a78bfa;
+            bottom: -50px;
+            right: -50px;
+            animation-delay: -5s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            100% {
+                transform: translate(30px, 50px) scale(1.1);
+            }
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.9;
+                transform: scale(0.98);
+            }
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .footer-simple {
+            margin-top: 50px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .footer-simple a {
+            color: var(--accent-hover);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer-simple a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+
+    <div class="error-container">
+        <div class="error-icon">🏃🏻‍♂️</div>
+        <div class="error-code">404</div>
+        <div class="error-title">Equation Not Found</div>
+        <div class="equation">404 + ? = Page</div>
+        <p class="error-message">
+            <strong>Error:</strong> This equation does not compute! The answer you're looking for isn't on this page.
+            <br><br>
+            Sprint back to the game and solve some real equations!
+        </p>
+        <a href="index.html" class="btn-home">
+            <i class="fas fa-calculator"></i> Return to Game
+        </a>
+
+        <div class="footer-simple">
+            <p>2022 &copy; All Rights Reserved | Designed and Developed by
+                <a href="https://github.com/Amey-Thakur" target="_blank" rel="noopener noreferrer">Amey Thakur</a> &
+                <a href="https://github.com/msatmod" target="_blank" rel="noopener noreferrer">Mega Satish</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        document.addEventListener('selectstart', e => e.preventDefault());
+    </script>
+</body>
+
+</html>

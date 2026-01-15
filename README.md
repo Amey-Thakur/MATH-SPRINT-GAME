@@ -162,10 +162,13 @@ MATH-SPRINT-GAME/
 This repository is openly shared to support learning and knowledge exchange across the academic community.
 
 **For Students**  
-Use this project to understand DOM manipulation, event handling loops, and local storage implementation in games.
+Use this project as reference material for understanding interactive system design, web development patterns, and Human Machine Interaction principles. The source code is available for study to facilitate self-paced learning and exploration of user-centric design patterns.
 
 **For Educators**  
-This project may be used as a supplementary resource for teaching JavaScript game logic and state management. Attribution is appreciated when utilizing content.
+This project may serve as a practical lab example or supplementary teaching resource for Human Machine Interaction and Human Machine Interaction Laboratory courses (`CSC801` & `CSL801`). Attribution is appreciated when utilizing content.
+
+**For Researchers**  
+The documentation and design approach may provide insights into academic project structuring and interactive web application development.
 
 ---
 

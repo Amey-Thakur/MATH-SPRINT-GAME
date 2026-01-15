@@ -116,19 +116,19 @@ MATH-SPRINT-GAME/
 ## Results
 
 <div align="center">
-  **Start Screen with High Scores**
+  <b>Start Screen with High Scores</b>
   <br>
   <img src="https://user-images.githubusercontent.com/54937357/154502789-db846b98-a668-4234-a8de-a182c776eb57.png" alt="Start Screen" width="80%">
   
   <br><br>
   
-  **Game Start Countdown**
+  <b>Game Start Countdown</b>
   <br>
   <img src="https://user-images.githubusercontent.com/54937357/154503279-027cab44-d260-4a80-9ffa-97e2a3e2bbb8.png" alt="Countdown" width="80%">
   
   <br><br>
 
-  **Active Gameplay Interface**
+  <b>Active Gameplay Interface</b>
   <br>
   <img src="https://user-images.githubusercontent.com/54937357/154503838-945ad50e-3b43-4d56-89a8-0fc69f73e55c.png" alt="Gameplay" width="80%">
 </div>

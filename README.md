@@ -50,7 +50,7 @@
 **Math Sprint Game** is a time-sensitive cognitive challenge that leverages **gamification mechanics** to reinforce arithmetic proficiency. The purpose of the system is to improve mental processing speed through a focused, high-intensity user interface.
 
 ### HMI Principles
-This project implements specific **Human-Machine Interaction** strategies to enhance engagement:
+The development of this interface was guided by core **Human-Machine Interaction** paradigms:
 *   **Cognitive Pacing**: The interface enforces a rapid interaction rhythm, encouraging the user to enter a "flow state" where cognition and action are synchronized.
 *   **Instantaneous Feedback Loops**: Immediate visual signaling of success or error provides the reinforcement schedule necessary for rapid learning and behavior modification.
 

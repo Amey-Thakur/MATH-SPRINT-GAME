@@ -1,3 +1,13 @@
+/**
+ * Project: Math Sprint Game
+ * File: script.js
+ * Date: February 17, 2022
+ * Description: Core game logic, timer handling, score calculation, and DOM manipulation.
+ * 
+ * Created by: Amey Thakur (https://github.com/Amey-Thakur) & Mega Satish (https://github.com/msatmod)
+ * Repository: https://github.com/Amey-Thakur/MATH-SPRINT-GAME
+ * License: MIT
+ */
 // Pages
 const gamePage = document.getElementById('game-page');
 const scorePage = document.getElementById('score-page');

@@ -14,6 +14,11 @@
   box-sizing: border-box;
 }
 
+/*
+  CSS Variables (Custom Properties):
+  Defined on :root for global scope access.
+  Allows for easy theming and consistent color usage across the application.
+*/
 :root {
   --primary-color: dodgerblue;
   --select-color: dodgerblue;
@@ -21,6 +26,12 @@
   --danger: rgb(214, 23, 23);
 }
 
+/*
+  Body Layout:
+  Uses Flexbox (display: flex) to center the game container both vertically and horizontally.
+  'height: 100vh' ensures the body takes up the full viewport height.
+  Background uses a subtle SVG pattern for visual texture.
+*/
 body {
   margin: 0;
   font-family: 'Play', sans-serif;

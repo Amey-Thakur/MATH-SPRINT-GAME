@@ -8,6 +8,13 @@
  * Repository: https://github.com/Amey-Thakur/MATH-SPRINT-GAME
  * License: MIT
  */
+/**
+ * Fisher-Yates Shuffle Algorithm (In-Place)
+ * Randomizes the order of elements in an array.
+ * Iterates backwards from the end of the array, swapping the current element
+ * with a randomly selected element from the preceding indices.
+ * Tme Complexity: O(n)
+ */
 function shuffle(array) {
     var currentIndex = array.length,
         temporaryValue, randomIndex;

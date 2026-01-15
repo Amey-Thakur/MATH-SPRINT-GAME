@@ -29,18 +29,22 @@ const penaltyTimeEl = document.querySelector('.penalty-time');
 const playAgainBtn = document.querySelector('.play-again');
 
 // Equations
+// Game Logic: State Variables
+// These variables track the application state including scoring, timer, 
+// and the mathematical equations generated for the current session.
 let questionAmount = 0;
 let equationsArray = [];
 let playerGuessArray = [];
 let bestScoreArray = [];
 
-// Game Page
+// Equation Generation Variables
 let firstNumber = 0;
 let secondNumber = 0;
 let equationObject = {};
 const wrongFormat = [];
 
-// Time
+// Timer Variables
+// Precision tracking using 0.1s intervals.
 let timer;
 let timePlayed = 0;
 let baseTime = 0;
@@ -60,6 +64,11 @@ function bestScoresToDOM() {
 }
 
 // Check Local Storage for Best Scores, set bestScoreArray
+/**
+ * Local Storage Management
+ * Retrieves 'bestScores' from the browser's local storage to maintain persistence across sessions.
+ * If no data exists, initializes a default array with zeroed scores.
+ */
 function getSavedBestScores() {
     if (localStorage.getItem('bestScores')) {
         bestScoreArray = JSON.parse(localStorage.bestScores);
@@ -186,6 +195,12 @@ function getRandomInt(max) {
 }
 
 // Create Correct/Incorrect Random Equations
+/**
+ * Equation Generation Algorithm
+ * randomly selects a subset of equations to be mathematically correct,
+ * and forces the remainder to be incorrect by slightly altering the result.
+ * This ensures unpredictable gameplay.
+ */
 function createEquations() {
     // Randomly choose how many correct equations there should be
     const correctEquations = getRandomInt(questionAmount);

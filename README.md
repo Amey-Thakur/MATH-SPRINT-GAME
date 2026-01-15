@@ -47,14 +47,17 @@
 <a name="overview"></a>
 ## Overview
 
-The **Math Sprint Game** is an engaging educational tool designed to improve mental math speed. Players interact with a rapid stream of math equations and must quickly decide whether the displayed result is correct or incorrect.
+**Math Sprint Game** is a time-sensitive cognitive challenge that leverages **gamification mechanics** to reinforce arithmetic proficiency. The purpose of the system is to improve mental processing speed through a focused, high-intensity user interface.
 
-The game emphasizes decision-making under time pressure, imposing penalties for incorrect answers and saving high scores to encourage competitive improvement.
+### HMI Principles
+This project implements specific **Human-Machine Interaction** strategies to enhance engagement:
+*   **Cognitive Pacing**: The interface enforces a rapid interaction rhythm, encouraging the user to enter a "flow state" where cognition and action are synchronized.
+*   **Instantaneous Feedback Loops**: Immediate visual signaling of success or error provides the reinforcement schedule necessary for rapid learning and behavior modification.
 
 > [!TIP]
-> **Game Logic**
+> **Cognitive Load Management**
 >
-> The core mechanic relies on rapid DOM updates and local storage for high scores, creating a seamless and responsive gaming loop without server-side latency.
+> The game employs a "Flash Card" visual metaphor, presenting one problem at a time to prevent **choice paralysis**. By isolating the active variable (the equation) and providing binary input options (Right/Wrong), the design effectively manages the user's working memory, strictly adhering to the HMI principle of **Minimizing Cognitive Load**.
 
 ---
 

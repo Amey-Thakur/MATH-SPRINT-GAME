@@ -140,8 +140,13 @@ MATH-SPRINT-GAME/
 ## Quick Start
 
 ### 1. Prerequisites
-- **Browser**: Any modern standards-compliant web browser.
-- **Environment**: No server-side runtime is required.
+- **Browser**: Any modern standards-compliant web browser (Chrome, Firefox, Edge, Safari).
+- **Environment**: No server-side runtime is required; this is a static client-side application.
+
+> [!WARNING]
+> **Local Execution**
+>
+> While the project can be executed by opening `index.html` directly, certain features may require an active internet connection to resolve external libraries correctly.
 
 ### 2. Setup & Deployment
 1.  **Clone the Repository**:

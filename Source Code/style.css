@@ -1,3 +1,13 @@
+/*
+  Project: Math Sprint Game
+  File: style.css
+  Date: February 17, 2022
+  Description: Custom styling for the game interface, animations, and responsive layout.
+
+  Created by: Amey Thakur (https://github.com/Amey-Thakur) & Mega Satish (https://github.com/msatmod)
+  Repository: https://github.com/Amey-Thakur/MATH-SPRINT-GAME
+  License: MIT
+*/
 @import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
 
 * {
@@ -143,7 +153,7 @@ label {
   user-select: none;
 }
 
-.finished > h1 {
+.finished>h1 {
   opacity: 0.5;
 }
 

@@ -8,6 +8,44 @@
  * Repository: https://github.com/Amey-Thakur/MATH-SPRINT-GAME
  * License: MIT
  */
+
+// =========================================
+//   CONSOLE EASTER EGG 🏃‍♂️
+// =========================================
+console.log(
+    "%c🏃‍♂️ Math Sprint Game",
+    "font-size: 24px; font-weight: bold; color: #8b5cf6; text-shadow: 2px 2px 0 #1e1b4b;"
+);
+console.log(
+    "%c➕➖✖️➗ Race against time with math equations!",
+    "font-size: 14px; color: #64748b;"
+);
+console.log(
+    "%c🎮 Developed by Amey Thakur & Mega Satish",
+    "font-size: 12px; color: #22c55e;"
+);
+console.log(
+    "%c🔗 https://github.com/Amey-Thakur/MATH-SPRINT-GAME",
+    "font-size: 12px; color: #2563eb;"
+);
+console.log(
+    "%c⚠️ This game is protected. Please respect the authors' work!",
+    "font-size: 12px; color: #f59e0b; font-weight: bold;"
+);
+
+// =========================================
+//   SECURITY MEASURES 🔒
+// =========================================
+(function initSecurity() {
+    document.addEventListener('contextmenu', function (e) { e.preventDefault(); });
+    document.addEventListener('dragstart', function (e) { e.preventDefault(); });
+    document.addEventListener('selectstart', function (e) {
+        if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') e.preventDefault();
+    });
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key)) || (e.ctrlKey && e.key === 'u')) e.preventDefault();
+    });
+})();
 // Pages
 const gamePage = document.getElementById('game-page');
 const scorePage = document.getElementById('score-page');

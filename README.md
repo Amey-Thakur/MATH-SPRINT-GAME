@@ -6,7 +6,7 @@
   [![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey)](LICENSE)
   ![Status](https://img.shields.io/badge/Status-Completed-success)
   [![Technology](https://img.shields.io/badge/Technology-HTML5%20%7C%20JavaScript-orange)](https://github.com/Amey-Thakur/MATH-SPRINT-GAME)
-  [![Developed by Amey Thakur](https://img.shields.io/badge/Developed%20by-Amey%20Thakur-blue)](https://github.com/Amey-Thakur)
+  [![Developed by Amey Thakur and Mega Satish](https://img.shields.io/badge/Developed%20by-Amey%20Thakur%20%26%20Mega%20Satish-blue.svg)](https://github.com/Amey-Thakur/MATH-SPRINT-GAME)
 
   A fast-paced educational web game where players race against time to solve math equations, testing speed and accuracy.
 
@@ -32,10 +32,14 @@
 
   **Terna Engineering College | Computer Engineering | Batch of 2022**
 
-| <a href="https://github.com/Amey-Thakur"><img src="https://github.com/Amey-Thakur.png" width="150" height="150" alt="Amey Thakur"></a><br>[**Amey Thakur**](https://github.com/Amey-Thakur)<br><br>[![ORCID](https://img.shields.io/badge/ORCID-0000--0001--5644--1575-green.svg)](https://orcid.org/0000-0001-5644-1575) | <a href="https://github.com/msatmod"><img src="Mega/Mega.png" width="150" height="150" alt="Mega Satish"></a><br>[**Mega Satish**](https://github.com/msatmod)<br><br>[![ORCID](https://img.shields.io/badge/ORCID-0000--0002--1430--4961-green.svg)](https://orcid.org/0000-0002-1430-4961) |
+| <a href="https://github.com/Amey-Thakur"><img src="https://github.com/Amey-Thakur.png" width="150" height="150" alt="Amey Thakur"></a><br>[**Amey Thakur**](https://github.com/Amey-Thakur)<br><br>[![ORCID](https://img.shields.io/badge/ORCID-0000--0001--5644--1575-green.svg)](https://orcid.org/0000-0001-5644-1575) | <a href="https://github.com/msatmod"><img src="Mega/Mega.png" width="150" height="150" alt="Mega Satish"></a><br>[**Mega Satish**](https://github.com/msatmod)<br><br>[![ORCID](https://img.shields.io/badge/ORCID-0000--0002--1844--9557-green.svg)](https://orcid.org/0000-0002-1844-9557) |
 | :---: | :---: |
 
 </div>
+
+> [!IMPORTANT]
+> ### 🤝🏻 Special Acknowledgement
+> *Special thanks to **[Mega Satish](https://github.com/msatmod)** for her meaningful contributions, guidance, and support that helped shape this work.*
 
 ---
 
@@ -89,6 +93,7 @@ MATH-SPRINT-GAME/
 │   └── SPECIFICATION.md             # Architecture & Design Specification
 │
 ├── Mega/                            # Project Resources & Assets
+│   └── Mega.png                     # Author Profile Image
 │
 ├── Source Code/                     # Primary Application Layer
 │   ├── style.css                    # Game Styling
@@ -171,9 +176,9 @@ This project may be used as a supplementary resource for teaching JavaScript gam
 This repository and all its creative and technical assets are made available under the **MIT License**. See the [LICENSE](LICENSE) file for complete terms.
 
 > [!NOTE]
-> **Summary**: You are free to share and adapt this content for any purpose, even commercially, as long as you provide appropriate attribution to the original authors.
+> **Summary**: You are free to share and adapt this content for any purpose, even commercially, as long as you provide appropriate attribution to the original author.
 
-Copyright © 2022 Amey Thakur & Mega Satish
+Copyright © 2022 Amey Thakur, Mega Satish
 
 ---
 
@@ -181,7 +186,7 @@ Copyright © 2022 Amey Thakur & Mega Satish
 <a name="about-this-repository"></a>
 ## About This Repository
 
-**Created & Maintained by**: [Amey Thakur](https://github.com/Amey-Thakur)  
+**Created & Maintained by**: [Amey Thakur](https://github.com/Amey-Thakur) & [Mega Satish](https://github.com/msatmod)  
 **Academic Journey**: Bachelor of Engineering in Computer Engineering (2018-2022)  
 **Institution**: [Terna Engineering College](https://ternaengg.ac.in/), Navi Mumbai  
 **University**: [University of Mumbai](https://mu.ac.in/)
@@ -190,7 +195,13 @@ This project features the **Math Sprint Game**, developed as a **Human Machine I
 
 **Connect:** [GitHub](https://github.com/Amey-Thakur) &nbsp;·&nbsp; [LinkedIn](https://www.linkedin.com/in/amey-thakur) &nbsp;·&nbsp; [ORCID](https://orcid.org/0000-0001-5644-1575)
 
-Grateful acknowledgment to the faculty members of the **Department of Computer Engineering** at Terna Engineering College.
+### Acknowledgments
+
+Grateful acknowledgment to [**Mega Satish**](https://github.com/msatmod) for her exceptional collaboration and scholarly partnership during the development of this educational game project. Her constant support, technical clarity, and dedication to software quality were instrumental in achieving the system's functional objectives. Learning alongside her was a transformative experience; her thoughtful approach to problem-solving and steady encouragement turned complex requirements into meaningful learning moments. This work reflects the growth and insights gained from our side-by-side academic journey. Thank you, Mega, for everything you shared and taught along the way.
+
+Grateful acknowledgment to the faculty members of the **Department of Computer Engineering** at Terna Engineering College for their guidance and instruction in Human Machine Interaction. Their expertise and support helped develop a strong understanding of interactive system design.
+
+Special thanks to the mentors and peers whose encouragement, discussions, and support contributed meaningfully to this learning endeavor.
 
 ---
 

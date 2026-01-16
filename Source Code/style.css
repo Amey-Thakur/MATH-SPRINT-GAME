@@ -312,43 +312,50 @@ label {
 }
 
 /* Header Constellation Animation */
-.header h1::before,
-.header h1::after {
+.header {
+  position: relative;
+  overflow: hidden;
+  /* Keep particles inside blue bar */
+}
+
+.header::before,
+.header::after {
   position: absolute;
-  font-family: 'Courier New', monospace;
-  /* Math font */
-  opacity: 0.4;
-  color: white;
-  font-size: 30px;
-  font-weight: 300;
+  font-family: 'Play', sans-serif;
+  font-weight: bold;
+  opacity: 0.3;
+  color: rgba(255, 255, 255, 0.5);
+  /* Subtle */
+  font-size: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  /* Vertically center */
   animation: floatConstellation 6s ease-in-out infinite;
   pointer-events: none;
 }
 
-.header h1::before {
-  content: "+  -  ×  ÷  +";
-  /* Arithmetic Symbols */
-  top: 0px;
-  /* Visible inside header */
-  left: -90px;
-  letter-spacing: 25px;
+.header::before {
+  content: "+ - × ÷";
+  left: 20px;
+  /* Far left of header */
+  letter-spacing: 15px;
+  /* Tighter grouping */
   animation-delay: 0s;
-  font-family: 'Play', sans-serif;
-  /* Match game font */
-  font-weight: bold;
 }
 
-.header h1::after {
-  content: "÷  +  -  ×  ÷";
-  /* Arithmetic Symbols */
-  bottom: 0px;
-  /* Visible inside header */
-  right: -90px;
-  letter-spacing: 30px;
+.header::after {
+  content: "÷ × - +";
+  right: 20px;
+  /* Far right of header */
+  letter-spacing: 15px;
+  /* Tighter grouping */
   animation-delay: 3s;
-  font-family: 'Play', sans-serif;
-  /* Match game font */
-  font-weight: bold;
+}
+
+/* Clear old h1 pseudos if any */
+.header h1::before,
+.header h1::after {
+  content: none;
 }
 
 @keyframes floatConstellation {

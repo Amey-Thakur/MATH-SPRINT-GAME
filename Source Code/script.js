@@ -431,7 +431,9 @@ function createEquations() {
 }
 
 // Add Equations to DOM
+// Add Equations to DOM
 function equationsToDOM() {
+    const scrollSurface = document.querySelector('.scroll-surface');
     equationsArray.forEach((equation, index) => {
         // Item
         const item = document.createElement('div');
@@ -446,14 +448,6 @@ function equationsToDOM() {
         const grid = document.createElement('div');
         grid.classList.add('equation-grid');
 
-        // Split equation string by spaces to get parts: [Num1, Op, Num2, =, Result]
-        // Note: Equation values are constructed as "A op B = C" or "A op B" (for wrong variants sometimes? check logic)
-        // My wrong logic was: `equation = ${firstNumber} x ${secondNumber}` (without = result possibly?)
-        // Let's check logic:
-        // Correct: `${a} op ${b} = ${c}` -> 5 parts
-        // Wrong: `${equation} = ${c}` where equation is `${a} op ${b}` -> `${a} op ${b} = ${c}` -> 5 parts
-        // So safe to assume 5 parts usually.
-
         const parts = equation.value.split(' ');
 
         parts.forEach(part => {
@@ -462,21 +456,27 @@ function equationsToDOM() {
             grid.appendChild(span);
         });
 
-        // Append
+        // Append to Surface
         item.appendChild(grid);
-        itemContainer.appendChild(item);
+        scrollSurface.appendChild(item);
     });
 }
 
 // Dynamically adding correct/incorrect equations
+// Dynamically adding correct/incorrect equations
 function populateGamePage() {
-    // Reset DOM, Set Blank Space Above
+    // Reset DOM
     itemContainer.textContent = '';
+
+    // Create Scroll Surface
+    const scrollSurface = document.createElement('div');
+    scrollSurface.classList.add('scroll-surface');
+    itemContainer.appendChild(scrollSurface);
+
     // Spacer
     const topSpacer = document.createElement('div');
     topSpacer.classList.add('height-240');
-    // Append
-    itemContainer.append(topSpacer);
+    scrollSurface.appendChild(topSpacer);
 
     // Create Equations, Build Elements in DOM
     createEquations();
@@ -485,7 +485,7 @@ function populateGamePage() {
     // Set Blank Space Below
     const bottomSpacer = document.createElement('div');
     bottomSpacer.classList.add('height-500');
-    itemContainer.appendChild(bottomSpacer);
+    scrollSurface.appendChild(bottomSpacer);
 }
 
 // Displays 3, 2, 1 GO!

@@ -151,6 +151,7 @@ function playAgain() {
     equationsArray = [];
     playerGuessArray = [];
     valueY = 0;
+    // Reset transform if surface exists (it will be rebuilt anyway, but safe to reset vars)
     playAgainBtn.hidden = true;
 }
 
@@ -298,7 +299,9 @@ let currentEquationIndex = 0; // Track active equation
 function select(guessedTrue) {
     // Scroll 80 pixels
     valueY += 80;
-    itemContainer.scroll({ top: valueY, behavior: 'smooth' });
+    const scrollSurface = document.querySelector('.scroll-surface');
+    scrollSurface.style.transform = `translateY(-${valueY}px)`;
+    // itemContainer.scroll({ top: valueY, behavior: 'smooth' }); // Removed native scroll
 
     // Toggle Text Highlight
     const itemElements = document.querySelectorAll('.item');

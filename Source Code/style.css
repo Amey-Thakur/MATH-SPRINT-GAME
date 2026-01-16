@@ -124,7 +124,8 @@ body {
   transform: scale(1.02);
 }
 
-.selected-label {
+.radio-container.selected-label,
+.radio-container.selected-label:hover {
   background: var(--select-color);
   color: white;
 }

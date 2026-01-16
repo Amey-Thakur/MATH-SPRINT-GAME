@@ -1159,6 +1159,10 @@ body.loaded .premium-loader {
   }
 }
 
+.penalty-flash {
+  animation: penaltyShake 0.4s ease-in-out;
+}
+
 /* Interactive Button Feedback */
 @keyframes flashGreen {
   0% {

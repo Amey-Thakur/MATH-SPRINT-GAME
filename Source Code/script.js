@@ -378,11 +378,8 @@ function populateGamePage() {
     // Spacer
     const topSpacer = document.createElement('div');
     topSpacer.classList.add('height-240');
-    // Selected Item
-    const selectedItem = document.createElement('div');
-    selectedItem.classList.add('selected-item');
     // Append
-    itemContainer.append(topSpacer, selectedItem);
+    itemContainer.append(topSpacer);
 
     // Create Equations, Build Elements in DOM
     createEquations();

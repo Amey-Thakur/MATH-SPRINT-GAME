@@ -155,12 +155,12 @@ function playAgain() {
 }
 
 // Show Score Page
+// Show Score Page
 function showScorePage() {
-    // Show Play Again and Share buttons after 1 second
-    setTimeout(() => {
-        playAgainBtn.hidden = false;
-        if (shareBtn) shareBtn.hidden = false;
-    }, 1000);
+    // Show Play Again and Share buttons immediately
+    playAgainBtn.hidden = false;
+    if (shareBtn) shareBtn.hidden = false;
+
     gamePage.hidden = true;
     scorePage.hidden = false;
 }

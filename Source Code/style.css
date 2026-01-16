@@ -55,8 +55,10 @@ body {
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
   width: 530px;
   max-width: 95%;
-  height: auto;
-  max-height: 98vh;
+  width: 530px;
+  max-width: 95%;
+  height: 95vh;
+  max-height: 95vh;
   position: relative;
   background: rgba(255, 255, 255, 0.5);
   user-select: none;
@@ -87,6 +89,15 @@ body {
   width: 100%;
 }
 
+width: 100%;
+}
+
+#start-form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .card[hidden] {
   display: none;
 }
@@ -97,7 +108,7 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .radio-container {

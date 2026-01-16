@@ -216,8 +216,7 @@ function shareScore() {
 function scoresToDOM() {
     finalTimeDisplay = finalTime.toFixed(1);
 
-    // Set Base Time and Penalty (Fixing Empty Boxes)
-    console.log("Updating Scores: Base", timePlayed, "Penalty", penaltyTime);
+    // Set Base Time and Penalty
     baseTimeEl.textContent = `${timePlayed.toFixed(1)}s`;
     penaltyTimeEl.textContent = `+${penaltyTime.toFixed(1)}s`;
     finalTimeEl.textContent = `${finalTimeDisplay}s`;

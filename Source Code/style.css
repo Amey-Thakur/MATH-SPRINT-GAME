@@ -982,8 +982,8 @@ button:active {
 
 /* STATE 1: Hovering Amey (Left) */
 .footer.hover-left .link-left {
-  background: var(--primary-color);
-  color: white;
+  background: var(--primary-color) !important;
+  color: white !important;
   transform: scale(1.1) rotate(-3deg);
   box-shadow: 0 5px 15px rgba(30, 144, 255, 0.4);
 }
@@ -1012,11 +1012,9 @@ button:active {
 
 /* STATE 2: Hovering Mega (Right) */
 .footer.hover-right .link-right {
-  background: var(--danger);
-  /* Different color for contrast? Or keep primary? Let's use a nice Purple or keep Primary */
-  background: #8b5cf6;
+  background: #8b5cf6 !important;
   /* Violet */
-  color: white;
+  color: white !important;
   transform: scale(1.1) rotate(3deg);
   box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4);
 }

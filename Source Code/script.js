@@ -200,7 +200,8 @@ function shareScore() {
         }).then(canvas => {
             console.log("Canvas generated!");
             const link = document.createElement('a');
-            link.download = `MathSprint-Score-${finalTime.toFixed(1)}s.png`;
+            const fileTime = finalTime.toFixed(1);
+            link.download = `MathSprint-Score-${fileTime}s.png`;
             link.href = canvas.toDataURL('image/png');
             link.click();
         }).catch(err => {

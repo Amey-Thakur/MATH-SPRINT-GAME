@@ -383,7 +383,7 @@ function select(guessedTrue) {
     guessedTrue ? playerGuessArray.push('true') : playerGuessArray.push('false');
 
     // Check if game is complete
-    if (playerGuessArray.length === questionAmount) {
+    if (playerGuessArray.length === Number(questionAmount)) {
         clearInterval(timer);
         // Calculate Score Logic here if previously present, or just show page
         equationsArray.forEach((equation, index) => {

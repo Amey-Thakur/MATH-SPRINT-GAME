@@ -65,6 +65,7 @@ const finalTimeEl = document.querySelector('.final-time');
 const baseTimeEl = document.querySelector('.base-time');
 const penaltyTimeEl = document.querySelector('.penalty-time');
 const playAgainBtn = document.querySelector('.play-again');
+const shareBtn = document.querySelector('.share-btn');
 
 // Equations
 // Game Logic: State Variables
@@ -155,12 +156,34 @@ function playAgain() {
 
 // Show Score Page
 function showScorePage() {
-    // Show Play Again button after 1 second
+    // Show Play Again and Share buttons after 1 second
     setTimeout(() => {
         playAgainBtn.hidden = false;
+        if (shareBtn) shareBtn.hidden = false;
     }, 1000);
     gamePage.hidden = true;
     scorePage.hidden = false;
+}
+
+// Generate Image & Share (Download)
+function shareScore() {
+    const shareCard = document.getElementById('share-card');
+    const shareTime = document.getElementById('share-time-value');
+    const shareBase = document.getElementById('share-base');
+    const sharePenalty = document.getElementById('share-penalty');
+
+    // Populate Data
+    shareTime.textContent = `${finalTime.toFixed(1)}s`;
+    shareBase.textContent = `${timePlayed.toFixed(1)}s`;
+    sharePenalty.textContent = `+${penaltyTime.toFixed(1)}s`;
+
+    // Generate Canvas
+    html2canvas(shareCard).then(canvas => {
+        const link = document.createElement('a');
+        link.download = `MathSprint-Score-${finalTime.toFixed(1)}s.png`;
+        link.href = canvas.toDataURL();
+        link.click();
+    });
 }
 
 // Format & Display Time in DOM

@@ -398,29 +398,32 @@ button:active {
 }
 
 /* Score Page ------------------------ */
+/* Score Page ------------------------ */
 .score-container {
   height: 60%;
-  /* Increased space */
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 20px;
+  padding-top: 10px;
+  /* Reduced */
 }
 
 .score-container .title {
   color: var(--primary-color);
-  /* Matches theme */
   text-shadow: none;
+  font-size: 1.8rem;
+  /* Reduced from default h1 */
+  margin-bottom: 5px;
 }
 
 .final-time {
-  font-size: 6rem;
+  font-size: 4.5rem;
+  /* Reduced from 6rem */
   font-weight: bold;
-  margin: 10px 0 20px 0;
+  margin: 5px 0 15px 0;
   color: var(--primary-color);
-  /* Blue as requested */
   text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -428,12 +431,9 @@ button:active {
   display: flex;
   justify-content: center;
   gap: 15px;
-  /* Tighter gap for 3 items */
   width: 95%;
-  /* Wider container */
-  margin-top: 15px;
+  margin-top: 10px;
   flex-wrap: wrap;
-  /* Allow wrapping on mobile */
 }
 
 .stat-box {
@@ -442,18 +442,18 @@ button:active {
   align-items: center;
   justify-content: center;
   background: rgba(255, 255, 255, 0.4);
-  padding: 15px;
-  border-radius: 20px;
+  padding: 10px 15px;
+  /* Reduced components */
+  border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.6);
   flex: 1;
-  min-width: 100px;
-  /* Ensure minimum width */
+  min-width: 90px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .stat-label {
-  font-size: 1.2rem;
-  /* Slightly smaller label */
+  font-size: 1rem;
+  /* Compact label */
   color: var(--primary-color);
   font-weight: 800;
   text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
@@ -465,35 +465,32 @@ button:active {
 .base-time,
 .best-time,
 .penalty-time {
-  font-size: 2.2rem;
-  /* Adjusted for 3 boxes */
+  font-size: 1.8rem;
+  /* Reduced from 2.2rem */
   font-weight: bold;
   color: #1e1b4b;
-  /* Default Dark Navy */
   margin: 0;
   line-height: 1;
 }
 
 .penalty-time {
   color: var(--danger);
-  /* Red */
 }
 
 .best-time {
   color: var(--success);
-  /* Green for High Score */
 }
 
 .score-footer {
   width: 100%;
   height: auto;
-  padding: 20px 0;
+  padding: 15px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
   margin-top: auto;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 /* Score Page Buttons */
@@ -501,14 +498,16 @@ button:active {
   cursor: pointer;
   color: white;
   border: none;
-  border-radius: 10px;
-  /* Matching Game Buttons (Rectangular) */
-  width: 220px;
-  /* Slightly wider */
-  height: 60px;
-  font-size: 1.8rem;
+  border-radius: 8px;
+  /* Slightly tighter radius */
+  width: 180px;
+  /* Reduced from 220px */
+  height: 50px;
+  /* Reduced from 60px */
+  font-size: 1.4rem;
+  /* Reduced from 1.8rem */
   font-family: 'Play', sans-serif;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   transition: transform 0.2s, background 0.2s;
   font-weight: bold;
   text-transform: uppercase;
@@ -516,9 +515,9 @@ button:active {
 }
 
 .score-btn:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   filter: brightness(110%);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .play-again {
@@ -528,13 +527,13 @@ button:active {
 .share-btn {
   background: white;
   color: var(--primary-color);
-  border: 3px solid var(--primary-color);
-  margin-left: 20px;
+  border: 2px solid var(--primary-color);
+  /* Thinner border */
+  margin-left: 15px;
 }
 
 .share-btn:hover {
   background: #f0f8ff;
-  /* AliceBlue tint on hover */
 }
 
 

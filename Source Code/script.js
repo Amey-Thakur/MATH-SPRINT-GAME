@@ -369,17 +369,100 @@ startForm.addEventListener('change', () => {
 startForm.addEventListener('submit', selectQuestionAmount);
 gamePage.addEventListener('click', startTimer);
 
-// Footer Interaction Logic
+// =========================================
+//   MATH OPS FOOTER ANIMATION
+// =========================================
 const footer = document.querySelector('.footer');
 const leftLink = document.querySelector('.link-left');
 const rightLink = document.querySelector('.link-right');
+const operator = document.querySelector('.math-operator');
 
-if (footer && leftLink && rightLink) {
-    leftLink.addEventListener('mouseenter', () => footer.classList.add('hover-left'));
-    leftLink.addEventListener('mouseleave', () => footer.classList.remove('hover-left'));
+let particleInterval;
 
-    rightLink.addEventListener('mouseenter', () => footer.classList.add('hover-right'));
-    rightLink.addEventListener('mouseleave', () => footer.classList.remove('hover-right'));
+function createParticle(type, startEl, endEl) {
+    const particle = document.createElement('span');
+    particle.classList.add('math-particle');
+    if (type === 'plus') {
+        particle.textContent = '+';
+        particle.classList.add('particle-plus');
+    } else {
+        particle.textContent = '−';
+        particle.classList.add('particle-minus');
+    }
+
+    // Get Positions
+    const startRect = startEl.getBoundingClientRect();
+    const endRect = endEl.getBoundingClientRect();
+    const footerRect = footer.getBoundingClientRect();
+
+    // Start Position (Center of start element)
+    const startX = startRect.left + startRect.width / 2 - footerRect.left;
+    const startY = startRect.top + startRect.height / 2 - footerRect.top;
+
+    particle.style.left = `${startX}px`;
+    particle.style.top = `${startY}px`;
+
+    footer.appendChild(particle);
+
+    // Animate to End Element
+    // Randomize end position slightly for impact scatter
+    const endX = endRect.left + endRect.width / 2 - footerRect.left + (Math.random() * 20 - 10);
+    const endY = endRect.top + endRect.height / 2 - footerRect.top + (Math.random() * 20 - 10);
+
+    // Trigger Reflow for transition
+    void particle.offsetWidth;
+
+    particle.style.transform = `translate(${endX - startX}px, ${endY - startY}px) rotate(${Math.random() * 360}deg)`;
+    particle.style.opacity = '0'; // Fade out at end
+
+    // Cleanup
+    setTimeout(() => {
+        particle.remove();
+    }, 800);
+}
+
+if (footer && leftLink && rightLink && operator) {
+    // -------------------------------------
+    // HOVER AMEY (ADDITION -> MEGA GROWS)
+    // -------------------------------------
+    leftLink.addEventListener('mouseenter', () => {
+        operator.textContent = '+';
+        operator.classList.add('operator-plus');
+        rightLink.classList.add('scale-up');
+
+        // Rapid fire particles
+        particleInterval = setInterval(() => {
+            createParticle('plus', leftLink, rightLink);
+        }, 100);
+    });
+
+    leftLink.addEventListener('mouseleave', () => {
+        operator.textContent = '&';
+        operator.classList.remove('operator-plus');
+        rightLink.classList.remove('scale-up');
+        clearInterval(particleInterval);
+    });
+
+    // -------------------------------------
+    // HOVER MEGA (SUBTRACTION -> AMEY SHRINKS)
+    // -------------------------------------
+    rightLink.addEventListener('mouseenter', () => {
+        operator.textContent = '−';
+        operator.classList.add('operator-minus');
+        leftLink.classList.add('scale-down');
+
+        // Rapid fire particles
+        particleInterval = setInterval(() => {
+            createParticle('minus', rightLink, leftLink);
+        }, 100);
+    });
+
+    rightLink.addEventListener('mouseleave', () => {
+        operator.textContent = '&';
+        operator.classList.remove('operator-minus');
+        leftLink.classList.remove('scale-down');
+        clearInterval(particleInterval);
+    });
 }
 
 // On Load

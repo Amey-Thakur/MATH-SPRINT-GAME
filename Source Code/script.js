@@ -166,11 +166,27 @@ function showScorePage() {
 // Format & Display Time in DOM
 function scoresToDOM() {
     finalTimeDisplay = finalTime.toFixed(1);
-    baseTime = timePlayed.toFixed(1);
-    penaltyTime = penaltyTime.toFixed(1);
-    baseTimeEl.textContent = `Base Time: ${baseTime}s`;
-    penaltyTimeEl.textContent = `Penalty: +${penaltyTime}s`;
+
+    // Find Best Score for current Question Amount
+    let bestScoreIndex = 0;
+    switch (questionAmount) {
+        case '10': bestScoreIndex = 0; break;
+        case '25': bestScoreIndex = 1; break;
+        case '50': bestScoreIndex = 2; break;
+        case '99': bestScoreIndex = 3; break;
+    }
+
+    // Set Text Content
+    // baseTimeEl is now used for Best Time
+    if (bestScoreArray[bestScoreIndex]) {
+        baseTimeEl.textContent = `${bestScoreArray[bestScoreIndex].bestScore}s`;
+    } else {
+        baseTimeEl.textContent = '0.0s';
+    }
+
+    penaltyTimeEl.textContent = `+${penaltyTime.toFixed(1)}s`;
     finalTimeEl.textContent = `${finalTimeDisplay}s`;
+
     updateBestScore();
     // Scroll to the Top, go to Score Page
     itemContainer.scrollTo({ top: 0, behavior: 'instant' });

@@ -61,17 +61,34 @@
 
         .error-container {
             max-width: 600px;
-            padding: 50px;
+            width: 90%;
+            max-height: 85vh;
+            /* Strict height limit */
+            overflow-y: auto;
+            /* Allow scrolling */
+            padding: 30px;
             position: relative;
             z-index: 2;
+            margin: 20px;
+            /* Prevent sticking to edges */
 
             /* Glassmorphism */
-            background: rgba(255, 255, 255, 0.65);
+            background: rgba(255, 255, 255, 0.75);
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.4);
             border-radius: 25px;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+
+            /* Hide Scrollbar */
+            scrollbar-width: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .error-container::-webkit-scrollbar {
+            display: none;
         }
 
         .error-icon {

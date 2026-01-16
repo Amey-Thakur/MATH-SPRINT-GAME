@@ -48,12 +48,10 @@ body {
   height: 100vh;
   background: #f0f8ff;
   /* AliceBlue base */
-  background-image: url("img/background.png");
+  background-image: url("img/background_signed.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /* Overlay to ensure readability if BG is too busy */
-  background-blend-mode: soft-light;
 }
 
 .game-container {

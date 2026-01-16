@@ -490,7 +490,7 @@ function populateGamePage() {
 
 // Sound Synthesis
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-function playBeep(freq = 600, type = 'sine') {
+function playBeep(freq = 600, type = 'sine', duration = 0.1) {
     if (audioCtx.state === 'suspended') audioCtx.resume();
     const osc = audioCtx.createOscillator();
     const gain = audioCtx.createGain();
@@ -499,27 +499,40 @@ function playBeep(freq = 600, type = 'sine') {
     osc.connect(gain);
     gain.connect(audioCtx.destination);
     osc.start();
-    gain.gain.exponentialRampToValueAtTime(0.00001, audioCtx.currentTime + 0.1);
-    osc.stop(audioCtx.currentTime + 0.1);
+
+    // Hold sound for duration, then fade out quickly
+    const now = audioCtx.currentTime;
+    gain.gain.setValueAtTime(0.5, now);
+    gain.gain.exponentialRampToValueAtTime(0.00001, now + duration);
+    osc.stop(now + duration);
 }
 
 // Displays 3, 2, 1 GO!
 function countdownStart() {
     let count = 3;
     countdown.textContent = count;
-    playBeep(600); // Beep for initial number
+    playBeep(600, 'sine', 0.1);
+    countdown.classList.remove('pop-in');
+    void countdown.offsetWidth; // Trigger reflow
+    countdown.classList.add('pop-in');
 
     const timeCountDown = setInterval(() => {
         count--;
         if (count === 0) {
             countdown.textContent = 'GO!';
-            playBeep(1200, 'square'); // High pitch for GO
+            playBeep(1200, 'square', 1.0); // Long sustain for GO
+            countdown.classList.remove('pop-in');
+            void countdown.offsetWidth;
+            countdown.classList.add('pop-in');
         } else if (count === -1) {
             showGamePage();
             clearInterval(timeCountDown);
         } else {
             countdown.textContent = count;
-            playBeep(600); // Beep for other numbers
+            playBeep(600, 'sine', 0.1);
+            countdown.classList.remove('pop-in');
+            void countdown.offsetWidth;
+            countdown.classList.add('pop-in');
         }
     }, 1000);
 }

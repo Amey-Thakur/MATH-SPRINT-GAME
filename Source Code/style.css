@@ -55,8 +55,8 @@ body {
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
   width: 530px;
   max-width: 95%;
-  height: 95vh;
-  max-height: 95vh;
+  height: 90vh;
+  max-height: 90vh;
   position: relative;
   background: rgba(255, 255, 255, 0.5);
   user-select: none;

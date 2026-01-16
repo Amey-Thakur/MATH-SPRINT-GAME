@@ -158,16 +158,12 @@ function playAgain() {
 // Show Score Page
 // Show Score Page
 function showScorePage() {
-    // Show Play Again Button after 1 second? No, instant now, but let's handle animation
-    // Initial State: Hero Reveal
-    scorePage.classList.add('score-reveal');
-    scorePage.hidden = false;
-    gamePage.hidden = true;
+    // Show Play Again and Share buttons immediately
+    playAgainBtn.hidden = false;
+    if (shareBtn) shareBtn.hidden = false;
 
-    // Trigger Animation Sequence
-    setTimeout(() => {
-        scorePage.classList.remove('score-reveal');
-    }, 1000); // Hold the hero moment for 1 second
+    gamePage.hidden = true;
+    scorePage.hidden = false;
 }
 
 // Generate Image & Share (Download)
@@ -380,23 +376,7 @@ function select(guessedTrue) {
     }
 
     // Add player guess to array
-    guessedTrue ? playerGuessArray.push('true') : playerGuessArray.push('false');
-
-    // Check if game is complete
-    if (playerGuessArray.length === Number(questionAmount)) {
-        clearInterval(timer);
-        // Calculate Score Logic here if previously present, or just show page
-        equationsArray.forEach((equation, index) => {
-            if (equation.evaluated === playerGuessArray[index]) {
-                // Correct
-            } else {
-                penaltyTime += 0.5; // Add penalty
-            }
-        });
-
-        finalTime = timePlayed + penaltyTime + 0; // Ensure number
-        showScorePage();
-    }
+    return guessedTrue ? playerGuessArray.push('true') : playerGuessArray.push('false');
 }
 
 // Display Game Page

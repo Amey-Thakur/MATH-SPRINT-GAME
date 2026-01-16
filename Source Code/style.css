@@ -375,5 +375,18 @@ button:active {
   margin: 0;
   font-size: 16px;
   color: #333;
+  font-family: 'Play', sans-serif;
+  color: #333;
   font-weight: normal;
+}
+
+.footer a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: var(--primary-color);
 }

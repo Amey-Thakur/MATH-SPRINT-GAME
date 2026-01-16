@@ -78,17 +78,15 @@ body {
 
 .header {
   background: var(--primary-color);
-  background: linear-gradient(135deg, #0a84ff 0%, #0056b3 100%);
   color: white;
   font-family: 'Play', sans-serif;
-  font-size: 26px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  letter-spacing: 4px;
-  height: 90px;
+  font-size: 24px;
+  text-shadow: 1px 2px 2px black;
+  letter-spacing: 2px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .card {
@@ -879,37 +877,47 @@ button:active {
   color: var(--primary-color);
   text-decoration: none;
   font-weight: 800;
-  padding: 2px 4px;
-  transition: all 0.3s ease;
+  padding: 6px 16px;
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 12px;
+  /* Matching Page Theme (Buttons) */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   font-family: 'Play', sans-serif;
   font-size: 15px;
-  border-bottom: 2px solid transparent;
+  /* Equalized with intro */
+  display: inline-block;
 }
 
 .footer a:hover {
-  color: #333;
-  border-bottom: 2px solid var(--primary-color);
+  background: rgba(255, 255, 255, 0.8);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  color: #222;
 }
 
 .footer-intro {
   text-transform: uppercase;
-  font-size: 12px;
-  letter-spacing: 3px;
-  color: #888;
+  font-size: 15px;
+  /* Equalized with names */
+  letter-spacing: 2px;
+  color: #666;
   font-weight: bold;
-  margin-right: 5px;
   font-family: 'Play', sans-serif;
+  margin-right: 5px;
 }
 
 .footer-year {
   font-family: 'Play', sans-serif;
   font-weight: bold;
   opacity: 0.6;
-  font-size: 14px;
-  border-left: 1px solid #ddd;
-  padding-left: 12px;
-  margin-left: 5px;
-  color: #777;
+  font-size: 15px;
+  border-left: 2px solid rgba(0, 0, 0, 0.1);
+  padding-left: 15px;
+  margin-left: 10px;
+  color: #666;
 }
 
 /* =========================================

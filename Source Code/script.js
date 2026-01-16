@@ -292,10 +292,24 @@ function startTimer() {
 }
 
 // Scroll, Store user selection in playerGuessArray
+// Scroll, Store user selection in playerGuessArray
+let currentEquationIndex = 0; // Track active equation
+
 function select(guessedTrue) {
     // Scroll 80 pixels
     valueY += 80;
     itemContainer.scroll({ top: valueY, behavior: 'smooth' });
+
+    // Toggle Text Highlight
+    const equationElements = document.querySelectorAll('.item h1');
+    if (equationElements[currentEquationIndex]) {
+        equationElements[currentEquationIndex].classList.remove('selected-text');
+    }
+    currentEquationIndex++;
+    if (equationElements[currentEquationIndex]) {
+        equationElements[currentEquationIndex].classList.add('selected-text');
+    }
+
     // Add player guess to array
     return guessedTrue ? playerGuessArray.push('true') : playerGuessArray.push('false');
 }

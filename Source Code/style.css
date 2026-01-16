@@ -529,23 +529,30 @@ button:active {
   align-items: center;
   justify-content: center;
   background: rgba(255, 255, 255, 0.4);
-  padding: 15px 20px;
-  /* Comfortable padding */
+  padding: 15px 15px;
+  /* Slightly tighter padding to allow text space */
   border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.6);
   flex: 1;
-  min-width: 100px;
+  min-width: 140px;
+  /* Increased to prevent wrapping */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .stat-label {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
+  /* Slightly smaller for better fit */
   color: var(--primary-color);
   font-weight: 800;
   text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
-  margin-bottom: 5px;
+  margin-bottom: 8px;
+  /* Better separation */
   text-transform: uppercase;
   letter-spacing: 1px;
+  text-align: center;
+  white-space: nowrap;
+  /* Force single line */
+  width: 100%;
 }
 
 .base-time,

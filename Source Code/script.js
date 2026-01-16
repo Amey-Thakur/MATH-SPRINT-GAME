@@ -369,5 +369,18 @@ startForm.addEventListener('change', () => {
 startForm.addEventListener('submit', selectQuestionAmount);
 gamePage.addEventListener('click', startTimer);
 
+// Footer Interaction Logic
+const footer = document.querySelector('.footer');
+const leftLink = document.querySelector('.link-left');
+const rightLink = document.querySelector('.link-right');
+
+if (footer && leftLink && rightLink) {
+    leftLink.addEventListener('mouseenter', () => footer.classList.add('hover-left'));
+    leftLink.addEventListener('mouseleave', () => footer.classList.remove('hover-left'));
+
+    rightLink.addEventListener('mouseenter', () => footer.classList.add('hover-right'));
+    rightLink.addEventListener('mouseleave', () => footer.classList.remove('hover-right'));
+}
+
 // On Load
 getSavedBestScores();

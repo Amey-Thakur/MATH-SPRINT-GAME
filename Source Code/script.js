@@ -357,6 +357,22 @@ function select(guessedTrue) {
             void timerDisplay.offsetWidth; // Trigger reflow
             timerDisplay.classList.add('penalty-flash');
         }
+
+        // Button Feedback Animation
+        const clickedBtn = guessedTrue ? document.getElementById('right-btn') : document.getElementById('wrong-btn');
+        if (clickedBtn) {
+            // Remove previous classes
+            clickedBtn.classList.remove('btn-success-flash', 'btn-error-flash');
+            void clickedBtn.offsetWidth; // Trigger reflow
+
+            // Add appropriate class: Good Move (Green) or Bad Move (Red)
+            clickedBtn.classList.add(isCorrect ? 'btn-success-flash' : 'btn-error-flash');
+
+            // Cleanup after animation
+            setTimeout(() => {
+                clickedBtn.classList.remove('btn-success-flash', 'btn-error-flash');
+            }, 400);
+        }
     }
 
     // Scroll 80 pixels

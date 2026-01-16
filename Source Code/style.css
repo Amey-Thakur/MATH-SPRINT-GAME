@@ -463,18 +463,25 @@ button:active {
 }
 
 .base-time,
-.penalty-time,
-.best-time {
+.best-time,
+.penalty-time {
   font-size: 2.2rem;
   /* Adjusted for 3 boxes */
   font-weight: bold;
   color: #1e1b4b;
+  /* Default Dark Navy */
   margin: 0;
   line-height: 1;
 }
 
 .penalty-time {
-  color: #ef4444;
+  color: var(--danger);
+  /* Red */
+}
+
+.best-time {
+  color: var(--success);
+  /* Green for High Score */
 }
 
 .score-footer {

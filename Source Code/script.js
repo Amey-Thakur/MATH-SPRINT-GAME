@@ -303,11 +303,11 @@ function select(guessedTrue) {
     // Toggle Text Highlight
     const itemElements = document.querySelectorAll('.item');
     if (itemElements[currentEquationIndex]) {
-        itemElements[currentEquationIndex].classList.remove('selected-item');
+        itemElements[currentEquationIndex].classList.remove('item-active');
     }
     currentEquationIndex++;
     if (itemElements[currentEquationIndex]) {
-        itemElements[currentEquationIndex].classList.add('selected-item');
+        itemElements[currentEquationIndex].classList.add('item-active');
     }
 
     // Add player guess to array
@@ -436,7 +436,7 @@ function equationsToDOM() {
 
         // Highlight first item
         if (index === 0) {
-            item.classList.add('selected-item');
+            item.classList.add('item-active');
         }
 
         // Equation Grid Container

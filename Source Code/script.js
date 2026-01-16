@@ -352,11 +352,13 @@ function selectQuestionAmount(e) {
     }
 }
 
-startForm.addEventListener('click', () => {
+// Switch selected input styling
+startForm.addEventListener('change', () => {
     radioContainers.forEach((radioEl) => {
         // Remove Selected Label Styling
         radioEl.classList.remove('selected-label');
-        // add it back if radio input checked 
+        // Check if the input within this container is checked
+        // Note: The input is expected to be the second child (index 1) based on HTML structure
         if (radioEl.children[1].checked) {
             radioEl.classList.add('selected-label');
         }

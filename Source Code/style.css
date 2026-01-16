@@ -400,29 +400,29 @@ button:active {
 /* Score Page ------------------------ */
 /* Score Page ------------------------ */
 .score-container {
-  height: 60%;
+  height: 65%;
+  /* Increased height usage */
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 10px;
-  /* Reduced */
+  padding-top: 15px;
 }
 
 .score-container .title {
   color: var(--primary-color);
   text-shadow: none;
-  font-size: 1.8rem;
-  /* Reduced from default h1 */
-  margin-bottom: 5px;
+  font-size: 2.2rem;
+  /* Restored balance */
+  margin-bottom: 10px;
 }
 
 .final-time {
-  font-size: 4.5rem;
-  /* Reduced from 6rem */
+  font-size: 5.5rem;
+  /* Better focus */
   font-weight: bold;
-  margin: 5px 0 15px 0;
+  margin: 5px 0 20px 0;
   color: var(--primary-color);
   text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.1);
 }
@@ -430,8 +430,9 @@ button:active {
 .stats-grid {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  width: 95%;
+  gap: 20px;
+  /* More breathing room */
+  width: 98%;
   margin-top: 10px;
   flex-wrap: wrap;
 }
@@ -442,18 +443,17 @@ button:active {
   align-items: center;
   justify-content: center;
   background: rgba(255, 255, 255, 0.4);
-  padding: 10px 15px;
-  /* Reduced components */
+  padding: 15px 20px;
+  /* Comfortable padding */
   border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.6);
   flex: 1;
-  min-width: 90px;
+  min-width: 100px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .stat-label {
-  font-size: 1rem;
-  /* Compact label */
+  font-size: 1.1rem;
   color: var(--primary-color);
   font-weight: 800;
   text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
@@ -465,8 +465,8 @@ button:active {
 .base-time,
 .best-time,
 .penalty-time {
-  font-size: 1.8rem;
-  /* Reduced from 2.2rem */
+  font-size: 2.0rem;
+  /* Balanced size */
   font-weight: bold;
   color: #1e1b4b;
   margin: 0;
@@ -484,13 +484,14 @@ button:active {
 .score-footer {
   width: 100%;
   height: auto;
-  padding: 15px 0;
+  padding: 20px 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
+  /* Better separation */
   margin-top: auto;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 /* Score Page Buttons */
@@ -499,13 +500,9 @@ button:active {
   color: white;
   border: none;
   border-radius: 8px;
-  /* Slightly tighter radius */
   width: 180px;
-  /* Reduced from 220px */
   height: 50px;
-  /* Reduced from 60px */
   font-size: 1.4rem;
-  /* Reduced from 1.8rem */
   font-family: 'Play', sans-serif;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   transition: transform 0.2s, background 0.2s;
@@ -528,7 +525,6 @@ button:active {
   background: white;
   color: var(--primary-color);
   border: 2px solid var(--primary-color);
-  /* Thinner border */
   margin-left: 15px;
 }
 

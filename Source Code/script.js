@@ -788,9 +788,11 @@ if (canvas && ctx) {
         leftLink.addEventListener('mouseenter', () => {
             animationMode = 'grid';
             setGridTargets();
+            footer.classList.add('hover-left');
         });
         leftLink.addEventListener('mouseleave', () => {
             animationMode = 'default';
+            footer.classList.remove('hover-left');
             // Give random velocities back
             particles.forEach(p => {
                 p.vx = (Math.random() - 0.5) * 1.5;
@@ -803,9 +805,11 @@ if (canvas && ctx) {
         rightLink.addEventListener('mouseenter', () => {
             animationMode = 'spiral';
             setSpiralTargets();
+            footer.classList.add('hover-right');
         });
         rightLink.addEventListener('mouseleave', () => {
             animationMode = 'default';
+            footer.classList.remove('hover-right');
             particles.forEach(p => {
                 p.vx = (Math.random() - 0.5) * 1.5;
                 p.vy = (Math.random() - 0.5) * 1.5;

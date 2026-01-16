@@ -371,23 +371,29 @@ button:active {
 }
 
 .wrong {
+  color: var(--danger);
   border-color: var(--danger);
   box-shadow: 0 0 10px rgba(231, 29, 54, 0.2);
   margin-right: 25px;
+  font-weight: bold;
 }
 
 .wrong:hover {
+  color: white;
   background: var(--danger);
   animation: shake 0.4s cubic-bezier(.36, .07, .19, .97) both;
   box-shadow: 0 0 20px var(--danger);
 }
 
 .right {
+  color: var(--success);
   border-color: var(--success);
   box-shadow: 0 0 10px rgba(46, 204, 113, 0.2);
+  font-weight: bold;
 }
 
 .right:hover {
+  color: white;
   background: var(--success);
   animation: pulse-green 1s infinite;
   box-shadow: 0 0 20px var(--success);

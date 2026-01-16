@@ -526,9 +526,15 @@ button:active {
 }
 
 .share-btn {
-  background: #f59e0b;
-  /* Golden Orange for Share */
+  background: white;
+  color: var(--primary-color);
+  border: 3px solid var(--primary-color);
   margin-left: 20px;
+}
+
+.share-btn:hover {
+  background: #f0f8ff;
+  /* AliceBlue tint on hover */
 }
 
 

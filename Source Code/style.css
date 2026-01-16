@@ -206,9 +206,19 @@ label {
 
 .item h1 {
   font-size: 30px;
-  font-family: 'Courier New', Courier, monospace;
-  /* Linear Alignment */
+  font-family: 'Play', sans-serif;
   font-weight: bold;
+  margin: 0;
+}
+
+.equation-grid {
+  display: grid;
+  grid-template-columns: 40px 30px 40px 30px 60px;
+  /* Fixed widths for linear alignment */
+  gap: 5px;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
 }
 
 .selected-item {

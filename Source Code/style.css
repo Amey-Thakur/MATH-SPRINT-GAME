@@ -48,24 +48,32 @@ body {
   height: 100vh;
   background: #f0f8ff;
   /* AliceBlue base */
-  background-image: url("img/background_signed.png");
+  background-image: url("img/background_sprint.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .game-container {
-  border: 1px solid black;
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
+  /* Glassmorphism Effect */
+  background: rgba(255, 255, 255, 0.65);
+  /* Increased opacity slightly for readability */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+
   width: 530px;
   max-width: 95%;
   height: 90vh;
   max-height: 90vh;
   position: relative;
-  background: rgba(255, 255, 255, 0.5);
   user-select: none;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  /* For rounded corners on children */
 }
 
 .header {

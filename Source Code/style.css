@@ -102,8 +102,8 @@ body {
 
 .radio-container {
   width: 90%;
-  height: 65px;
-  margin: 8px auto;
+  height: 80px;
+  margin: 15px auto;
   cursor: pointer;
   border: 2px solid black;
   border-radius: 5px;

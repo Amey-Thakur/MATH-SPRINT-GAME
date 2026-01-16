@@ -189,15 +189,27 @@ label {
   width: 100%;
 }
 
-.item-container {
+.game-content-wrapper {
   flex: 1;
-  height: auto;
+  width: 100%;
+  position: relative;
+  /* Anchor for absolute children */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.item-container {
+  height: 100%;
+  width: 100%;
   overflow-y: hidden;
   /* Disable manual scroll, allow JS scroll */
   position: relative;
   -ms-overflow-style: none;
   touch-action: none;
   /* Disable touch scroll */
+  z-index: 2;
+  /* Text above highlight */
 }
 
 .item-container::-webkit-scrollbar {
@@ -236,11 +248,16 @@ label {
 
 .selected-item {
   background: var(--select-color);
-  position: fixed;
-  top: 443px;
-  z-index: -1;
-  width: 529px;
+  position: absolute;
+  top: 240px;
+  /* Matches the top spacer height */
+  left: 0;
+  width: 100%;
+  /* Fill wrapper width */
   height: 80px;
+  /* Matches item height */
+  z-index: 1;
+  /* Behind text */
 }
 
 .item-footer,

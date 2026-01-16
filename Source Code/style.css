@@ -988,3 +988,35 @@ body.loaded .premium-loader {
 .pop-in {
   animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
+
+/* Penalty Animation */
+@keyframes penaltyShake {
+  0% {
+    transform: translateX(0);
+    color: inherit;
+  }
+
+  25% {
+    transform: translateX(-6px);
+    color: var(--danger);
+  }
+
+  50% {
+    transform: translateX(6px);
+    color: var(--danger);
+  }
+
+  75% {
+    transform: translateX(-4px);
+    color: var(--danger);
+  }
+
+  100% {
+    transform: translateX(0);
+    color: inherit;
+  }
+}
+
+.penalty-flash {
+  animation: penaltyShake 0.4s ease-in-out;
+}

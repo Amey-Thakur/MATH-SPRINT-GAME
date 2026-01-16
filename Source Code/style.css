@@ -115,7 +115,7 @@ body {
   position: relative;
   display: flex;
   align-items: center;
-  transition: transform 0.2s ease, background 0.2s ease;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
 }
 
 .radio-container:hover {

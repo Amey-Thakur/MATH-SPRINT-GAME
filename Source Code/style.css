@@ -397,9 +397,20 @@ button:active {
   color: #333;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease;
+  position: relative;
+  display: inline-block;
+  padding: 0 5px;
+  border-radius: 5px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .footer a:hover {
-  color: var(--primary-color);
+  color: white;
+  background: var(--primary-color);
+  transform: scale(1.1) rotate(-3deg);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.footer a:last-child:hover {
+  transform: scale(1.1) rotate(3deg);
 }

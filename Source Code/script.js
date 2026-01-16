@@ -167,6 +167,12 @@ function showScorePage() {
 function scoresToDOM() {
     finalTimeDisplay = finalTime.toFixed(1);
 
+    // Set Base Time and Penalty (Fixing Empty Boxes)
+    console.log("Updating Scores: Base", timePlayed, "Penalty", penaltyTime);
+    baseTimeEl.textContent = `${timePlayed.toFixed(1)}s`;
+    penaltyTimeEl.textContent = `+${penaltyTime.toFixed(1)}s`;
+    finalTimeEl.textContent = `${finalTimeDisplay}s`;
+
     // Find Best Score for current Question Amount
     let bestScoreIndex = 0;
     switch (questionAmount) {

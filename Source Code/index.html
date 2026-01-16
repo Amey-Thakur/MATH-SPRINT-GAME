@@ -181,71 +181,98 @@
 
         <!-- The Unified Masterpiece Share Card (Glassmorphic Theme) -->
         <div id="share-card"
-            style="position: absolute; top: -9999px; left: -9999px; width: 500px; padding: 50px; background: rgba(255, 255, 255, 0.95); color: #333; border-radius: 30px; font-family: 'Play', sans-serif; text-align: center; border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: 0 20px 50px rgba(0,0,0,0.1);">
+            style="position: absolute; top: -9999px; left: -9999px; width: 500px; padding: 50px; background: white; color: #333; border-radius: 30px; font-family: 'Play', sans-serif; text-align: center; border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: 0 20px 50px rgba(0,0,0,0.1); overflow: hidden;">
 
-            <!-- Header Section -->
-            <div style="margin-bottom: 35px;">
-                <h1
-                    style="margin: 0; font-size: 32px; letter-spacing: 2px; font-weight: 800; color: dodgerblue; text-transform: uppercase;">
-                    MATH SPRINT</h1>
-                <div style="font-size: 14px; color: #666; letter-spacing: 1px; margin-top: 5px; font-weight: bold;">
-                    Pushing the limits of mental math.</div>
-            </div>
-
-            <!-- Score Area -->
+            <!-- Subtle Mathematical Watermark Background -->
             <div
-                style="background: rgba(30, 144, 255, 0.05); border: 2px solid rgba(30, 144, 255, 0.1); padding: 40px 20px; border-radius: 25px; margin-bottom: 30px;">
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; opacity: 0.03; color: #000; font-family: 'Play', sans-serif;">
                 <div
-                    style="font-size: 12px; color: #888; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 10px; font-weight: 700;">
-                    Final Sprint Time</div>
-                <div id="share-time-value"
-                    style="font-size: 80px; font-weight: 900; color: #222; line-height: 1; margin-bottom: 5px;">0.0s
-                </div>
+                    style="position: absolute; top: 5%; left: 5%; font-size: 120px; transform: rotate(-15deg); font-weight: 900;">
+                    +</div>
+                <div
+                    style="position: absolute; top: 35%; right: -5%; font-size: 150px; transform: rotate(15deg); font-weight: 900;">
+                    ÷</div>
+                <div
+                    style="position: absolute; bottom: 10%; left: -5%; font-size: 140px; transform: rotate(25deg); font-weight: 900;">
+                    ×</div>
+                <div
+                    style="position: absolute; bottom: 5%; right: 10%; font-size: 110px; transform: rotate(-10deg); font-weight: 900;">
+                    −</div>
+                <div
+                    style="position: absolute; top: 20%; left: 40%; font-size: 70px; transform: rotate(10deg); font-weight: 900;">
+                    %</div>
+                <div
+                    style="position: absolute; top: 65%; left: 30%; font-size: 90px; transform: rotate(-20deg); font-weight: 900;">
+                    =</div>
             </div>
 
-            <!-- Stats Bar -->
-            <div style="display: flex; gap: 20px; margin-bottom: 40px; justify-content: center;">
-                <div
-                    style="background: white; padding: 15px 25px; border-radius: 15px; border: 1px solid #eee; flex: 1;">
-                    <div
-                        style="font-size: 11px; color: #999; text-transform: uppercase; margin-bottom: 5px; letter-spacing: 1px;">
-                        Base Time</div>
-                    <div id="share-base" style="font-size: 22px; font-weight: 700; color: #444;">0.0s</div>
-                </div>
-                <div
-                    style="background: white; padding: 15px 25px; border-radius: 15px; border: 1px solid #eee; flex: 1;">
-                    <div
-                        style="font-size: 11px; color: #999; text-transform: uppercase; margin-bottom: 5px; letter-spacing: 1px;">
-                        Penalty</div>
-                    <div id="share-penalty" style="font-size: 22px; font-weight: 700; color: #ff4757;">+0.0s</div>
-                </div>
-            </div>
+            <!-- Content Container to ensure it stays above watermark -->
+            <div style="position: relative; z-index: 1;">
 
-            <!-- Creator Spotlight -->
-            <!-- Creator Spotlight -->
-            <div style="padding-top: 30px; border-top: 1px solid #eee;">
-                <div
-                    style="font-size: 11px; color: #888; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 25px; font-weight: 700;">
-                    A Collaborative Masterpiece By</div>
-
-                <div style="display: flex; justify-content: center; gap: 15px; margin-bottom: 30px;">
-                    <div
-                        style="padding: 12px 28px; background: dodgerblue; color: white; border-radius: 12px; font-weight: 800; font-size: 16px; box-shadow: 0 10px 20px rgba(30, 144, 255, 0.2);">
-                        Amey Thakur</div>
-                    <div
-                        style="padding: 12px 28px; background: dodgerblue; color: white; border-radius: 12px; font-weight: 800; font-size: 16px; box-shadow: 0 10px 20px rgba(30, 144, 255, 0.2);">
-                        Mega Satish</div>
+                <!-- Header Section -->
+                <div style="margin-bottom: 35px;">
+                    <h1
+                        style="margin: 0; font-size: 32px; letter-spacing: 2px; font-weight: 800; color: dodgerblue; text-transform: uppercase;">
+                        MATH SPRINT</h1>
+                    <div style="font-size: 14px; color: #666; letter-spacing: 1px; margin-top: 5px; font-weight: bold;">
+                        Pushing the limits of mental math.</div>
                 </div>
 
-                <div style="margin-top: 20px;">
+                <!-- Score Area -->
+                <div
+                    style="background: rgba(30, 144, 255, 0.05); border: 2px solid rgba(30, 144, 255, 0.1); padding: 40px 20px; border-radius: 25px; margin-bottom: 30px;">
                     <div
-                        style="font-size: 10px; color: #888; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 5px;">
-                        HUMAN MACHINE INTERACTION PROJECT</div>
+                        style="font-size: 12px; color: #888; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 10px; font-weight: 700;">
+                        Final Sprint Time</div>
+                    <div id="share-time-value"
+                        style="font-size: 80px; font-weight: 900; color: #222; line-height: 1; margin-bottom: 5px;">0.0s
+                    </div>
+                </div>
+
+                <!-- Stats Bar -->
+                <div style="display: flex; gap: 20px; margin-bottom: 40px; justify-content: center;">
                     <div
-                        style="font-size: 14px; color: dodgerblue; font-weight: 900; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 15px;">
-                        MATH SPRINT GAME</div>
-                    <div style="font-size: 11px; color: #666; font-family: monospace; font-weight: bold;">
-                        amey-thakur.github.io/MATH-SPRINT-GAME</div>
+                        style="background: white; padding: 15px 25px; border-radius: 15px; border: 1px solid #eee; flex: 1;">
+                        <div
+                            style="font-size: 11px; color: #999; text-transform: uppercase; margin-bottom: 5px; letter-spacing: 1px;">
+                            Base Time</div>
+                        <div id="share-base" style="font-size: 22px; font-weight: 700; color: #444;">0.0s</div>
+                    </div>
+                    <div
+                        style="background: white; padding: 15px 25px; border-radius: 15px; border: 1px solid #eee; flex: 1;">
+                        <div
+                            style="font-size: 11px; color: #999; text-transform: uppercase; margin-bottom: 5px; letter-spacing: 1px;">
+                            Penalty</div>
+                        <div id="share-penalty" style="font-size: 22px; font-weight: 700; color: #ff4757;">+0.0s</div>
+                    </div>
+                </div>
+
+                <!-- Creator Spotlight -->
+                <!-- Creator Spotlight -->
+                <div style="padding-top: 30px; border-top: 1px solid #eee;">
+                    <div
+                        style="font-size: 11px; color: #888; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 25px; font-weight: 700;">
+                        A Collaborative Masterpiece By</div>
+
+                    <div style="display: flex; justify-content: center; gap: 15px; margin-bottom: 30px;">
+                        <div
+                            style="padding: 12px 28px; background: dodgerblue; color: white; border-radius: 12px; font-weight: 800; font-size: 16px; box-shadow: 0 10px 20px rgba(30, 144, 255, 0.2);">
+                            Amey Thakur</div>
+                        <div
+                            style="padding: 12px 28px; background: dodgerblue; color: white; border-radius: 12px; font-weight: 800; font-size: 16px; box-shadow: 0 10px 20px rgba(30, 144, 255, 0.2);">
+                            Mega Satish</div>
+                    </div>
+
+                    <div style="margin-top: 20px;">
+                        <div
+                            style="font-size: 10px; color: #888; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 5px;">
+                            HUMAN MACHINE INTERACTION PROJECT</div>
+                        <div
+                            style="font-size: 14px; color: dodgerblue; font-weight: 900; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 15px;">
+                            MATH SPRINT GAME</div>
+                        <div style="font-size: 11px; color: #666; font-family: monospace; font-weight: bold;">
+                            amey-thakur.github.io/MATH-SPRINT-GAME</div>
+                    </div>
                 </div>
             </div>
         </div>

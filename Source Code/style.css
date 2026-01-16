@@ -853,6 +853,42 @@ button:active {
   font-weight: bold;
   transition: all 0.4s ease;
   font-size: 18px;
+  color: var(--primary-color);
+  animation: pulse-op 2s infinite ease-in-out;
+}
+
+@keyframes pulse-op {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: scale(1.3);
+    opacity: 1;
+    color: var(--success);
+  }
+}
+
+.footer-intro {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  /* Elegant spacing */
+  color: #555;
+  font-weight: bold;
+}
+
+.footer-year {
+  font-family: 'Courier New', monospace;
+  /* Tech feel */
+  font-weight: bold;
+  opacity: 0.7;
+  font-size: 14px;
+  border-left: 2px solid #ddd;
+  padding-left: 10px;
 }
 
 /* =========================================

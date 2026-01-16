@@ -203,7 +203,7 @@ function shareScore() {
             console.log("Premium Canvas generated!");
             const link = document.createElement('a');
             const fileTime = finalTime.toFixed(1);
-            link.download = `MathSprint-Result-${fileTime}s.png`;
+            link.download = `MathSprint-Score-${fileTime}s.png`;
             link.href = canvas.toDataURL('image/png', 1.0); // Max quality
             link.click();
         }).catch(err => {

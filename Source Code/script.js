@@ -296,7 +296,44 @@ function startTimer() {
 // Scroll, Store user selection in playerGuessArray
 let currentEquationIndex = 0; // Track active equation
 
+function playGameSound(isCorrect) {
+    if (audioCtx.state === 'suspended') audioCtx.resume();
+    const osc = audioCtx.createOscillator();
+    const gain = audioCtx.createGain();
+
+    if (isCorrect) {
+        // High pitch "Ding"
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(880, audioCtx.currentTime); // A5
+        osc.frequency.exponentialRampToValueAtTime(1760, audioCtx.currentTime + 0.1); // A6
+        gain.gain.setValueAtTime(0.3, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.3);
+    } else {
+        // Low pitch "Buzz"
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(150, audioCtx.currentTime);
+        osc.frequency.linearRampToValueAtTime(100, audioCtx.currentTime + 0.2);
+        gain.gain.setValueAtTime(0.3, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.2);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.2);
+    }
+
+    osc.connect(gain);
+    gain.connect(audioCtx.destination);
+}
+
 function select(guessedTrue) {
+    // Sound Effect Logic
+    const currentEquation = equationsArray[currentEquationIndex];
+    if (currentEquation) {
+        // Compare string 'true'/'false' with boolean guess
+        const isCorrect = currentEquation.evaluated === (guessedTrue ? 'true' : 'false');
+        playGameSound(isCorrect);
+    }
+
     // Scroll 80 pixels
     valueY += 80;
     const scrollSurface = document.querySelector('.scroll-surface');

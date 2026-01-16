@@ -320,10 +320,14 @@ function playGameSound(isCorrect) {
         osc.start();
         osc.stop(audioCtx.currentTime + 0.2);
     }
-
     osc.connect(gain);
     gain.connect(audioCtx.destination);
 }
+
+const rightScoreEl = document.getElementById('right-score');
+const wrongScoreEl = document.getElementById('wrong-score');
+let rightCount = 0;
+let wrongCount = 0;
 
 function select(guessedTrue) {
     // Sound Effect Logic & Visual Feedback
@@ -337,6 +341,15 @@ function select(guessedTrue) {
         const itemElements = document.querySelectorAll('.item');
         if (itemElements[currentEquationIndex]) {
             itemElements[currentEquationIndex].classList.add(isCorrect ? 'answered-right' : 'answered-wrong');
+        }
+
+        // Live Score Update
+        if (isCorrect) {
+            rightCount++;
+            rightScoreEl.textContent = rightCount;
+        } else {
+            wrongCount++;
+            wrongScoreEl.textContent = wrongCount;
         }
     }
 
@@ -364,6 +377,17 @@ function select(guessedTrue) {
 function showGamePage() {
     gamePage.hidden = false;
     countdownPage.hidden = true;
+    // Scroll to Top
+    valueY = 0; // Ensure reset
+    const scrollSurface = document.querySelector('.scroll-surface');
+    if (scrollSurface) scrollSurface.style.transform = `translateY(0px)`;
+
+    // Reset Counters
+    rightCount = 0;
+    wrongCount = 0;
+    rightScoreEl.textContent = '0';
+    wrongScoreEl.textContent = '0';
+
 }
 
 // Get Random Number up to amax number

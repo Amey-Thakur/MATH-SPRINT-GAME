@@ -370,99 +370,175 @@ startForm.addEventListener('submit', selectQuestionAmount);
 gamePage.addEventListener('click', startTimer);
 
 // =========================================
-//   MATH OPS FOOTER ANIMATION
+//   GEOMETRIC CONSTELLATION FOOTER
 // =========================================
-const footer = document.querySelector('.footer');
+const canvas = document.getElementById('footer-canvas');
+const ctx = canvas ? canvas.getContext('2d') : null;
 const leftLink = document.querySelector('.link-left');
 const rightLink = document.querySelector('.link-right');
-const operator = document.querySelector('.math-operator');
 
-let particleInterval;
+let animationMode = 'default'; // 'default', 'grid' (Amey), 'spiral' (Mega)
+let particles = [];
+const particleCount = 60;
+const connectionDistance = 100;
 
-function createParticle(type, startEl, endEl) {
-    const particle = document.createElement('span');
-    particle.classList.add('math-particle');
-    if (type === 'plus') {
-        particle.textContent = '+';
-        particle.classList.add('particle-plus');
-    } else {
-        particle.textContent = '×';
-        particle.classList.add('particle-multiply');
+if (canvas && ctx) {
+    // Resize Canvas
+    function resizeCanvas() {
+        canvas.width = canvas.parentElement.offsetWidth;
+        canvas.height = canvas.parentElement.offsetHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    // Particle Class
+    class Particle {
+        constructor() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.vx = (Math.random() - 0.5) * 1.5;
+            this.vy = (Math.random() - 0.5) * 1.5;
+            this.size = Math.random() * 2 + 1;
+            this.color = '#333';
+            this.targetX = null;
+            this.targetY = null;
+        }
+
+        update() {
+            // Mode Logic
+            if (animationMode === 'grid') {
+                // Move towards target in Grid
+                if (this.targetX !== null && this.targetY !== null) {
+                    const dx = this.targetX - this.x;
+                    const dy = this.targetY - this.y;
+                    this.x += dx * 0.1;
+                    this.y += dy * 0.1;
+                }
+                this.color = 'dodgerblue';
+            } else if (animationMode === 'spiral') {
+                // Move towards Spiral paths
+                if (this.targetX !== null && this.targetY !== null) {
+                    const dx = this.targetX - this.x;
+                    const dy = this.targetY - this.y;
+                    this.x += dx * 0.1; // Smooth ease
+                    this.y += dy * 0.1;
+                }
+                this.color = 'magenta';
+            } else {
+                // Default Brownian Motion
+                this.x += this.vx;
+                this.y += this.vy;
+
+                // Bounce off walls
+                if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+
+                this.color = '#555';
+            }
+        }
+
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fillStyle = this.color;
+            ctx.fill();
+        }
     }
 
-    // Get Positions
-    const startRect = startEl.getBoundingClientRect();
-    const endRect = endEl.getBoundingClientRect();
-    const footerRect = footer.getBoundingClientRect();
+    // Initialize Particles
+    for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+    }
 
-    // Start Position (Center of start element)
-    const startX = startRect.left + startRect.width / 2 - footerRect.left;
-    const startY = startRect.top + startRect.height / 2 - footerRect.top;
+    // Calculate Targets for Shapes
+    function setGridTargets() {
+        const cols = 10;
+        const rows = Math.ceil(particleCount / cols);
+        const paddingX = canvas.width / cols;
+        const paddingY = canvas.height / rows;
 
-    particle.style.left = `${startX}px`;
-    particle.style.top = `${startY}px`;
+        particles.forEach((p, i) => {
+            const col = i % cols;
+            const row = Math.floor(i / cols);
+            p.targetX = col * paddingX + paddingX / 2;
+            p.targetY = row * paddingY + paddingY / 2;
+        });
+    }
 
-    footer.appendChild(particle);
+    function setSpiralTargets() {
+        const centerX = canvas.width / 2;
+        const centerY = canvas.height / 2;
+        const spacing = 4; // Tightness
 
-    // Animate to End Element
-    // Randomize end position slightly for impact scatter
-    const endX = endRect.left + endRect.width / 2 - footerRect.left + (Math.random() * 20 - 10);
-    const endY = endRect.top + endRect.height / 2 - footerRect.top + (Math.random() * 20 - 10);
+        particles.forEach((p, i) => {
+            const angle = i * 0.5;
+            const radius = spacing * angle;
+            p.targetX = centerX + radius * Math.cos(angle);
+            p.targetY = centerY + radius * Math.sin(angle);
+        });
+    }
 
-    // Trigger Reflow for transition
-    void particle.offsetWidth;
+    // Interaction Listeners
+    if (leftLink) {
+        leftLink.addEventListener('mouseenter', () => {
+            animationMode = 'grid';
+            setGridTargets();
+        });
+        leftLink.addEventListener('mouseleave', () => {
+            animationMode = 'default';
+            // Give random velocities back
+            particles.forEach(p => {
+                p.vx = (Math.random() - 0.5) * 1.5;
+                p.vy = (Math.random() - 0.5) * 1.5;
+            });
+        });
+    }
 
-    particle.style.transform = `translate(${endX - startX}px, ${endY - startY}px) rotate(${Math.random() * 360}deg)`;
-    particle.style.opacity = '0'; // Fade out at end
+    if (rightLink) {
+        rightLink.addEventListener('mouseenter', () => {
+            animationMode = 'spiral';
+            setSpiralTargets();
+        });
+        rightLink.addEventListener('mouseleave', () => {
+            animationMode = 'default';
+            particles.forEach(p => {
+                p.vx = (Math.random() - 0.5) * 1.5;
+                p.vy = (Math.random() - 0.5) * 1.5;
+            });
+        });
+    }
 
-    // Cleanup
-    setTimeout(() => {
-        particle.remove();
-    }, 800);
-}
+    // Animation Loop
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-if (footer && leftLink && rightLink && operator) {
-    // -------------------------------------
-    // HOVER AMEY (ADDITION -> MEGA GROWS)
-    // -------------------------------------
-    leftLink.addEventListener('mouseenter', () => {
-        operator.textContent = '+';
-        operator.classList.add('operator-plus');
-        rightLink.classList.add('scale-up');
+        particles.forEach((p, index) => {
+            p.update();
+            p.draw();
 
-        // Rapid fire particles
-        particleInterval = setInterval(() => {
-            createParticle('plus', leftLink, rightLink);
-        }, 100);
-    });
+            // Connect lines
+            for (let j = index + 1; j < particles.length; j++) {
+                const p2 = particles[j];
+                const dx = p.x - p2.x;
+                const dy = p.y - p2.y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
 
-    leftLink.addEventListener('mouseleave', () => {
-        operator.textContent = '&';
-        operator.classList.remove('operator-plus');
-        rightLink.classList.remove('scale-up');
-        clearInterval(particleInterval);
-    });
+                if (dist < connectionDistance) {
+                    ctx.beginPath();
+                    ctx.strokeStyle = p.color;
+                    ctx.globalAlpha = 1 - dist / connectionDistance; // Fade out by distance
+                    ctx.lineWidth = 0.5;
+                    ctx.moveTo(p.x, p.y);
+                    ctx.lineTo(p2.x, p2.y);
+                    ctx.stroke();
+                    ctx.globalAlpha = 1;
+                }
+            }
+        });
 
-    // -------------------------------------
-    // HOVER MEGA (MULTIPLICATION -> AMEY BOOSTS)
-    // -------------------------------------
-    rightLink.addEventListener('mouseenter', () => {
-        operator.textContent = '×';
-        operator.classList.add('operator-multiply');
-        leftLink.classList.add('scale-boost');
-
-        // Rapid fire particles
-        particleInterval = setInterval(() => {
-            createParticle('multiply', rightLink, leftLink);
-        }, 100);
-    });
-
-    rightLink.addEventListener('mouseleave', () => {
-        operator.textContent = '&';
-        operator.classList.remove('operator-multiply');
-        leftLink.classList.remove('scale-boost');
-        clearInterval(particleInterval);
-    });
+        requestAnimationFrame(animate);
+    }
+    animate();
 }
 
 // On Load

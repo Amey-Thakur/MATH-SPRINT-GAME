@@ -397,21 +397,23 @@ button:active {
   cursor: pointer;
 }
 
-/* Score Page ------------------------- */
 /* Score Page ------------------------ */
 .score-container {
-  height: 50%;
+  height: 60%;
+  /* Increased space */
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 20px;
 }
 
 .final-time {
-  font-size: 5.5rem;
+  font-size: 6rem;
+  /* Even Bigger */
   font-weight: bold;
-  margin: 5px 0 15px 0;
+  margin: 10px 0 20px 0;
   color: white;
   text-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
@@ -419,49 +421,62 @@ button:active {
 .stats-grid {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  width: 100%;
-  margin-top: 10px;
+  gap: 25px;
+  width: 90%;
+  margin-top: 15px;
 }
 
 .stat-box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgba(255, 255, 255, 0.25);
-  padding: 15px 25px;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 20px;
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  min-width: 140px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  flex: 1;
+  /* Fill space */
+  max-width: 200px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .stat-label {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: var(--primary-color);
-  font-weight: bold;
+  font-weight: 800;
+  /* Extra bold */
   text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .base-time,
 .penalty-time {
-  font-size: 2.6rem;
+  font-size: 2.8rem;
   font-weight: bold;
-  color: #333;
-  margin: 5px 0 0 0;
+  color: #1e1b4b;
+  /* Dark Navy for contrast */
+  margin: 0;
+  line-height: 1;
 }
 
 .penalty-time {
-  color: #ff3b30;
+  color: #ef4444;
   /* Bright Red */
 }
 
 .score-footer {
   width: 100%;
-  height: 100px;
+  height: auto;
+  padding: 20px 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
+  margin-top: auto;
+  margin-bottom: 30px;
 }
 
 .play-again {
@@ -470,17 +485,40 @@ button:active {
   color: white;
   border: none;
   border-radius: 50px;
-  width: 180px;
-  height: 50px;
-  font-size: 1.5rem;
+  width: 200px;
+  height: 60px;
+  font-size: 1.6rem;
   font-family: 'Play', sans-serif;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s, background 0.2s;
+  font-weight: bold;
 }
 
 .play-again:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   filter: brightness(110%);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.share-btn {
+  cursor: pointer;
+  background: white;
+  color: var(--primary-color);
+  border: 3px solid var(--primary-color);
+  border-radius: 50px;
+  width: 200px;
+  height: 60px;
+  font-size: 1.6rem;
+  font-family: 'Play', sans-serif;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, background 0.2s;
+  font-weight: bold;
+}
+
+.share-btn:hover {
+  transform: translateY(-4px);
+  background: #f0f8ff;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
 }
 
 .share-btn {

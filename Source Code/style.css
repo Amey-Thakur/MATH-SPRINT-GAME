@@ -247,6 +247,15 @@ label {
   user-select: none;
 }
 
+/* History Colors */
+.item.answered-right h1 {
+  color: var(--success);
+}
+
+.item.answered-wrong h1 {
+  color: var(--danger);
+}
+
 .finished>h1 {
   opacity: 0.5;
 }

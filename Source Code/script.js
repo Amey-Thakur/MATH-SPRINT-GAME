@@ -326,12 +326,18 @@ function playGameSound(isCorrect) {
 }
 
 function select(guessedTrue) {
-    // Sound Effect Logic
+    // Sound Effect Logic & Visual Feedback
     const currentEquation = equationsArray[currentEquationIndex];
     if (currentEquation) {
         // Compare string 'true'/'false' with boolean guess
         const isCorrect = currentEquation.evaluated === (guessedTrue ? 'true' : 'false');
         playGameSound(isCorrect);
+
+        // Visual Feedback (Color History)
+        const itemElements = document.querySelectorAll('.item');
+        if (itemElements[currentEquationIndex]) {
+            itemElements[currentEquationIndex].classList.add(isCorrect ? 'answered-right' : 'answered-wrong');
+        }
     }
 
     // Scroll 80 pixels

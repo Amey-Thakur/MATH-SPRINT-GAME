@@ -86,6 +86,10 @@ body {
   width: 100%;
 }
 
+.card[hidden] {
+  display: none;
+}
+
 /* Splash Page -------------------- */
 input[type="radio"] {
   opacity: 0;

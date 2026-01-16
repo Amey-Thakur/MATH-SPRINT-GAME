@@ -501,14 +501,18 @@ button:active {
   cursor: pointer;
   color: white;
   border: none;
-  border-radius: 50px;
-  width: 200px;
+  border-radius: 10px;
+  /* Matching Game Buttons (Rectangular) */
+  width: 220px;
+  /* Slightly wider */
   height: 60px;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-family: 'Play', sans-serif;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s, background 0.2s;
   font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .score-btn:hover {

@@ -179,36 +179,74 @@
             </div>
         </div>
 
-        <!-- Hidden Share Card (For Image Generation) -->
+        <!-- Premium Hidden Share Card (For Image Generation) -->
         <div id="share-card"
-            style="position: absolute; top: -9999px; left: -9999px; width: 400px; padding: 20px; background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%); color: white; border-radius: 15px; font-family: 'Play', sans-serif; text-align: center; border: 2px solid rgba(255,255,255,0.1);">
-            <h2 style="margin: 0 0 10px; font-size: 24px; color: dodgerblue;">MATH SPRINT</h2>
-            <div style="font-size: 14px; opacity: 0.8; margin-bottom: 20px;">GAME RESULT</div>
+            style="position: absolute; top: -9999px; left: -9999px; width: 450px; padding: 40px; background: radial-gradient(circle at top left, #1e1e2e, #11111b); color: white; border-radius: 24px; font-family: 'Play', sans-serif; text-align: center; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
 
-            <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; margin-bottom: 15px;">
-                <div style="font-size: 14px; color: #aaa;">FINAL TIME</div>
-                <div id="share-time-value" style="font-size: 40px; font-weight: bold; color: white;">0.0s</div>
-            </div>
-
-            <div style="display: flex; justify-content: space-between; font-size: 14px; padding: 0 10px;">
-                <div>
-                    <div style="color: #aaa;">Base Time</div>
-                    <div id="share-base" style="font-weight: bold;">0.0s</div>
-                </div>
-                <div>
-                    <div style="color: #aaa;">Penalty</div>
-                    <div id="share-penalty" style="font-weight: bold; color: #ff4757;">+0.0s</div>
+            <!-- Header with Logo -->
+            <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 30px;">
+                <div
+                    style="width: 40px; height: 40px; background: dodgerblue; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-weight: bold; font-size: 20px; box-shadow: 0 0 20px rgba(30,144,255,0.4);">
+                    ∑</div>
+                <div style="text-align: left;">
+                    <h2
+                        style="margin: 0; font-size: 24px; letter-spacing: 2px; color: white; text-transform: uppercase;">
+                        Math Sprint</h2>
+                    <div
+                        style="font-size: 10px; color: #89b4fa; letter-spacing: 4px; text-transform: uppercase; font-weight: bold;">
+                        World Ranking</div>
                 </div>
             </div>
-            <div style="margin-top: 15px; font-weight: bold; font-size: 16px; color: #0a84ff;">Can you beat my score?
+
+            <!-- Big Score Display -->
+            <div
+                style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); padding: 30px; border-radius: 20px; margin-bottom: 25px; position: relative; overflow: hidden;">
+                <div
+                    style="font-size: 12px; color: #a6adc8; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px;">
+                    Performance Time</div>
+                <div id="share-time-value"
+                    style="font-size: 64px; font-weight: 800; color: white; text-shadow: 0 0 30px rgba(255,255,255,0.2);">
+                    0.0s</div>
+                <div style="margin-top: 15px; font-weight: bold; font-size: 18px; color: #94e2d5;">New Personal Best! 🏆
+                </div>
             </div>
-            <div
-                style="margin-top: 10px; font-size: 13px; color: white; font-weight: bold; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px;">
-                By Amey Thakur & Mega Satish</div>
-            <div
-                style="margin-top: 5px; font-size: 10px; color: #0a84ff; text-transform: uppercase; letter-spacing: 1px;">
-                Authorship Verified &mdash; 2022</div>
-            <div style="margin-top: 8px; font-size: 9px; opacity: 0.5;">amey-thakur.github.io/MATH-SPRINT-GAME</div>
+
+            <!-- Detailed Stats -->
+            <div style="display: flex; gap: 15px; margin-bottom: 30px;">
+                <div
+                    style="flex: 1; background: rgba(255,255,255,0.03); padding: 15px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.05);">
+                    <div style="font-size: 10px; color: #a6adc8; text-transform: uppercase; margin-bottom: 5px;">Base
+                    </div>
+                    <div id="share-base" style="font-size: 18px; font-weight: bold; color: white;">0.0s</div>
+                </div>
+                <div
+                    style="flex: 1; background: rgba(255,255,255,0.03); padding: 15px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.05);">
+                    <div style="font-size: 10px; color: #a6adc8; text-transform: uppercase; margin-bottom: 5px;">Penalty
+                    </div>
+                    <div id="share-penalty" style="font-size: 18px; font-weight: bold; color: #f38ba8;">+0.0s</div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div style="font-size: 16px; color: #fab387; font-weight: bold; margin-bottom: 30px;">チャレンジを受け入れますか？
+                <br><span style="font-size: 20px; color: white;">Can you beat my score?</span></div>
+
+            <!-- Authorship Section (Promotion) -->
+            <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 25px; text-align: center;">
+                <div
+                    style="font-size: 11px; color: #a6adc8; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px;">
+                    Handcrafted with Passion by</div>
+                <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 15px;">
+                    <div
+                        style="background: #313244; padding: 8px 15px; border-radius: 10px; color: white; font-size: 13px; font-weight: bold; border: 1px solid rgba(255,255,255,0.1);">
+                        @Amey-Thakur</div>
+                    <div
+                        style="background: #313244; padding: 8px 15px; border-radius: 10px; color: white; font-size: 13px; font-weight: bold; border: 1px solid rgba(255,255,255,0.1);">
+                        @msatmod</div>
+                </div>
+                <div style="font-size: 10px; color: #89b4fa; font-weight: bold; margin-top: 10px;">Play now at
+                    amey-thakur.github.io/MATH-SPRINT-GAME</div>
+            </div>
         </div>
 
         <!-- Authorship Footer -->

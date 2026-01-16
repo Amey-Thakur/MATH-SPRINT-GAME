@@ -194,15 +194,17 @@ function shareScore() {
 
         // Generate Canvas
         html2canvas(shareCard, {
-            scale: 2, // High resolution
-            backgroundColor: null, // Transparent background if needed
-            logging: true // Enable logs for html2canvas
+            scale: 3, // Ultra-High resolution for promotion
+            backgroundColor: null,
+            useCORS: true,
+            logging: false,
+            allowTaint: true
         }).then(canvas => {
-            console.log("Canvas generated!");
+            console.log("Premium Canvas generated!");
             const link = document.createElement('a');
             const fileTime = finalTime.toFixed(1);
-            link.download = `MathSprint-Score-${fileTime}s.png`;
-            link.href = canvas.toDataURL('image/png');
+            link.download = `MathSprint-Result-${fileTime}s.png`;
+            link.href = canvas.toDataURL('image/png', 1.0); // Max quality
             link.click();
         }).catch(err => {
             console.error("html2canvas error:", err);

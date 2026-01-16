@@ -326,20 +326,20 @@ label {
 }
 
 .header h1::before {
-  content: "∫  ∑";
-  /* Symbols */
-  top: -20px;
-  left: -60px;
-  letter-spacing: 20px;
+  content: "∫  ∑  ∂  λ  ∆";
+  /* More Symbols */
+  top: -25px;
+  left: -90px;
+  letter-spacing: 25px;
   animation-delay: 0s;
 }
 
 .header h1::after {
-  content: "π  √";
-  /* Symbols */
-  bottom: -15px;
-  right: -60px;
-  letter-spacing: 25px;
+  content: "π  √  Ω  ∞  ≈";
+  /* More Symbols */
+  bottom: -20px;
+  right: -90px;
+  letter-spacing: 30px;
   animation-delay: 3s;
 }
 

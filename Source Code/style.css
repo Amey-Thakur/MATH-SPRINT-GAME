@@ -395,6 +395,11 @@ button:active {
   text-align: center;
   user-select: none;
   cursor: pointer;
+  color: var(--primary-color);
+  /* Updated to match theme */
+  text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.2);
+  /* Added depth */
+  font-weight: bold;
 }
 
 /* Score Page ------------------------ */

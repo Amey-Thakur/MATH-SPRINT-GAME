@@ -244,26 +244,90 @@ function createEquations() {
     const correctEquations = getRandomInt(questionAmount);
     // Set amount of wrong equations
     const wrongEquations = questionAmount - correctEquations;
-    // Loop through, multiply random numbers up to 9, push to array
+    // Loop through, generate correct equations
     for (let i = 0; i < correctEquations; i++) {
         firstNumber = getRandomInt(9);
         secondNumber = getRandomInt(9);
-        const equationValue = firstNumber * secondNumber;
-        const equation = `${firstNumber} x ${secondNumber} = ${equationValue}`;
+
+        const operatorType = getRandomInt(4); // 0: +, 1: -, 2: x, 3: /
+        let equationValue;
+        let equation;
+
+        switch (operatorType) {
+            case 0: // Addition
+                equationValue = firstNumber + secondNumber;
+                equation = `${firstNumber} + ${secondNumber} = ${equationValue}`;
+                break;
+            case 1: // Subtraction
+                if (firstNumber < secondNumber) { [firstNumber, secondNumber] = [secondNumber, firstNumber]; } // Ensure positive
+                equationValue = firstNumber - secondNumber;
+                equation = `${firstNumber} - ${secondNumber} = ${equationValue}`;
+                break;
+            case 2: // Multiplication
+                equationValue = firstNumber * secondNumber;
+                equation = `${firstNumber} x ${secondNumber} = ${equationValue}`;
+                break;
+            case 3: // Division
+                if (secondNumber === 0) secondNumber = 1; // No div by zero
+                equationValue = firstNumber; // Start with answer
+                firstNumber = equationValue * secondNumber; // Calculate correct dividend
+                equation = `${firstNumber} / ${secondNumber} = ${equationValue}`;
+                // Wait, logic check: 
+                // If I want X / Y = Z. 
+                // I generate Y (secondNumber) and Z (equationValue). 
+                // Then X (firstNumber) = Y * Z.
+                // So equation is "X / Y = Z".
+                break;
+        }
+
         equationObject = { value: equation, evaluated: 'true' };
         equationsArray.push(equationObject);
     }
-    // Loop through, mess with the equation results, push to array
+
+    // Loop through, generate wrong equations
     for (let i = 0; i < wrongEquations; i++) {
         firstNumber = getRandomInt(9);
         secondNumber = getRandomInt(9);
-        const equationValue = firstNumber * secondNumber;
-        wrongFormat[0] = `${firstNumber} x ${secondNumber + 1} = ${equationValue}`;
-        wrongFormat[1] = `${firstNumber} x ${secondNumber} = ${equationValue - 1}`;
-        wrongFormat[2] = `${firstNumber + 1} x ${secondNumber} = ${equationValue}`;
+
+        const operatorType = getRandomInt(4);
+        let equationValue;
+        let equation;
+
+        switch (operatorType) {
+            case 0: // Addition
+                equationValue = firstNumber + secondNumber;
+                equation = `${firstNumber} + ${secondNumber}`; // Base
+                break;
+            case 1: // Subtraction
+                if (firstNumber < secondNumber) { [firstNumber, secondNumber] = [secondNumber, firstNumber]; }
+                equationValue = firstNumber - secondNumber;
+                equation = `${firstNumber} - ${secondNumber}`;
+                break;
+            case 2: // Multiplication
+                equationValue = firstNumber * secondNumber;
+                equation = `${firstNumber} x ${secondNumber}`;
+                break;
+            case 3: // Division
+                if (secondNumber === 0) secondNumber = 1;
+                let actualResult = firstNumber;
+                firstNumber = actualResult * secondNumber;
+                equationValue = actualResult;
+                equation = `${firstNumber} / ${secondNumber}`;
+                break;
+        }
+
+        // Randomly offset the result
+        const offset = Math.random() > 0.5 ? 1 : -1;
+        // Ensure strictly non-negative result if you want, but strictly wrong is key. 
+        // Simple shift is enough.
+
+        wrongFormat[0] = `${equation} = ${equationValue - 1}`;
+        wrongFormat[1] = `${equation} = ${equationValue + 1}`;
+        wrongFormat[2] = `${equation} = ${equationValue + 2}`;
+
         const formatChoice = getRandomInt(3);
-        const equation = wrongFormat[formatChoice];
-        equationObject = { value: equation, evaluated: 'false' };
+        const finalEquation = wrongFormat[formatChoice];
+        equationObject = { value: finalEquation, evaluated: 'false' };
         equationsArray.push(equationObject);
     }
     shuffle(equationsArray);

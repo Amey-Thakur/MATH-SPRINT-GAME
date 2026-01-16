@@ -127,12 +127,21 @@
             <div class="score-container">
                 <h1 class="title">Your Time</h1>
                 <h1 class="final-time"></h1>
-                <h1 class="base-time"></h1>
-                <h1 class="penalty-time"></h1>
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <span class="stat-label">Base Time</span>
+                        <span class="base-time"></span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">Penalty</span>
+                        <span class="penalty-time"></span>
+                    </div>
+                </div>
             </div>
-            <!-- Play Again Button -->
+            <!-- Score Footer -->
             <div class="score-footer">
                 <button class="play-again" onclick="playAgain()" hidden>Play Again</button>
+                <button class="share-btn" onclick="shareScore()" hidden>Share Score</button>
             </div>
         </div>
 

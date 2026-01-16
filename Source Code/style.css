@@ -78,15 +78,17 @@ body {
 
 .header {
   background: var(--primary-color);
+  background: linear-gradient(135deg, #0a84ff 0%, #0056b3 100%);
   color: white;
   font-family: 'Play', sans-serif;
-  font-size: 24px;
-  text-shadow: 1px 2px 2px black;
-  letter-spacing: 2px;
-  height: 80px;
+  font-size: 26px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 4px;
+  height: 90px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .card {
@@ -876,42 +878,38 @@ button:active {
 .footer a {
   color: var(--primary-color);
   text-decoration: none;
-  font-weight: bold;
-  padding: 4px 12px;
-  background: rgba(10, 132, 255, 0.08);
-  border: 1px solid rgba(10, 132, 255, 0.15);
-  border-radius: 8px;
+  font-weight: 800;
+  padding: 2px 4px;
   transition: all 0.3s ease;
   font-family: 'Play', sans-serif;
-  font-size: 14px;
+  font-size: 15px;
+  border-bottom: 2px solid transparent;
 }
 
 .footer a:hover {
-  background: var(--primary-color);
-  color: white;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(10, 132, 255, 0.15);
+  color: #333;
+  border-bottom: 2px solid var(--primary-color);
 }
 
 .footer-intro {
   text-transform: uppercase;
-  font-size: 13px;
-  letter-spacing: 2px;
-  color: #777;
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #888;
   font-weight: bold;
-  margin-right: 8px;
+  margin-right: 5px;
   font-family: 'Play', sans-serif;
 }
 
 .footer-year {
   font-family: 'Play', sans-serif;
   font-weight: bold;
-  opacity: 0.8;
+  opacity: 0.6;
   font-size: 14px;
-  border-left: 1px solid #ccc;
+  border-left: 1px solid #ddd;
   padding-left: 12px;
-  margin-left: 10px;
-  color: #555;
+  margin-left: 5px;
+  color: #777;
 }
 
 /* =========================================

@@ -496,9 +496,9 @@ button:active {
   margin-bottom: 30px;
 }
 
-.play-again {
+/* Score Page Buttons */
+.score-btn {
   cursor: pointer;
-  background: var(--primary-color);
   color: white;
   border: none;
   border-radius: 50px;
@@ -511,31 +511,20 @@ button:active {
   font-weight: bold;
 }
 
-.play-again:hover {
+.score-btn:hover {
   transform: translateY(-4px);
   filter: brightness(110%);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
 }
 
-.share-btn {
-  cursor: pointer;
-  background: white;
-  color: var(--primary-color);
-  border: 3px solid var(--primary-color);
-  border-radius: 50px;
-  width: 200px;
-  height: 60px;
-  font-size: 1.6rem;
-  font-family: 'Play', sans-serif;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s, background 0.2s;
-  font-weight: bold;
+.play-again {
+  background: var(--primary-color);
 }
 
-.share-btn:hover {
-  transform: translateY(-4px);
-  background: #f0f8ff;
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+.share-btn {
+  background: #f59e0b;
+  /* Golden Orange for Share */
+  margin-left: 20px;
 }
 
 .share-btn {

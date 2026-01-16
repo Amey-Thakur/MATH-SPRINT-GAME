@@ -358,10 +358,12 @@ label {
   }
 }
 
-font-family: 'Play',
-sans-serif;
-font-weight: bold;
-margin: 0;
+/* Restore Item Typography */
+.item h1 {
+  font-size: 30px;
+  font-family: 'Play', sans-serif;
+  font-weight: bold;
+  margin: 0;
 }
 
 .equation-grid {

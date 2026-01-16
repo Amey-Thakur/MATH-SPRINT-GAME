@@ -201,7 +201,7 @@ label {
 }
 
 .finished>h1 {
-  /* No special style here, inherits */
+  opacity: 0.5;
 }
 
 .item h1 {
@@ -209,9 +209,6 @@ label {
   font-family: 'Courier New', Courier, monospace;
   /* Linear Alignment */
   font-weight: bold;
-}
-
-opacity: 0.5;
 }
 
 .selected-item {

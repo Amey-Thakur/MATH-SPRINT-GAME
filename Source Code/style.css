@@ -294,11 +294,74 @@ label {
   opacity: 0.5;
 }
 
-.item h1 {
+.header {
+  height: 80px;
+  /* Specific height to contain particles */
+  position: relative;
+  display: flex;
+  /* Ensure centering */
+  justify-content: center;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 50px;
+  position: relative;
+  /* Anchor for particles */
+  z-index: 2;
+}
+
+/* Header Constellation Animation */
+.header h1::before,
+.header h1::after {
+  position: absolute;
+  font-family: 'Courier New', monospace;
+  /* Math font */
+  opacity: 0.4;
+  color: white;
   font-size: 30px;
-  font-family: 'Play', sans-serif;
-  font-weight: bold;
-  margin: 0;
+  font-weight: 300;
+  animation: floatConstellation 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.header h1::before {
+  content: "∫  ∑";
+  /* Symbols */
+  top: -20px;
+  left: -60px;
+  letter-spacing: 20px;
+  animation-delay: 0s;
+}
+
+.header h1::after {
+  content: "π  √";
+  /* Symbols */
+  bottom: -15px;
+  right: -60px;
+  letter-spacing: 25px;
+  animation-delay: 3s;
+}
+
+@keyframes floatConstellation {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.4;
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(5deg);
+    opacity: 0.8;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  }
+}
+
+font-family: 'Play',
+sans-serif;
+font-weight: bold;
+margin: 0;
 }
 
 .equation-grid {

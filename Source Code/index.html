@@ -29,6 +29,9 @@
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <link rel="canonical" href="https://amey-thakur.github.io/MATH-SPRINT-GAME/">
 
+    <!-- Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -174,6 +177,30 @@
                 <button class="play-again score-btn" onclick="playAgain()" hidden>Play Again</button>
                 <button class="share-btn score-btn" onclick="shareScore()" hidden>Share Score</button>
             </div>
+        </div>
+
+        <!-- Hidden Share Card (For Image Generation) -->
+        <div id="share-card"
+            style="position: absolute; top: -9999px; left: -9999px; width: 400px; padding: 20px; background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%); color: white; border-radius: 15px; font-family: 'Play', sans-serif; text-align: center; border: 2px solid rgba(255,255,255,0.1);">
+            <h2 style="margin: 0 0 10px; font-size: 24px; color: dodgerblue;">MATH SPRINT</h2>
+            <div style="font-size: 14px; opacity: 0.8; margin-bottom: 20px;">GAME RESULT</div>
+
+            <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; margin-bottom: 15px;">
+                <div style="font-size: 14px; color: #aaa;">FINAL TIME</div>
+                <div id="share-time-value" style="font-size: 40px; font-weight: bold; color: white;">0.0s</div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; font-size: 14px; padding: 0 10px;">
+                <div>
+                    <div style="color: #aaa;">Base Time</div>
+                    <div id="share-base" style="font-weight: bold;">0.0s</div>
+                </div>
+                <div>
+                    <div style="color: #aaa;">Penalty</div>
+                    <div id="share-penalty" style="font-weight: bold; color: #ff4757;">+0.0s</div>
+                </div>
+            </div>
+            <div style="margin-top: 20px; font-size: 10px; opacity: 0.5;">amey-thakur.github.io/MATH-SPRINT-GAME</div>
         </div>
 
         <!-- Authorship Footer -->

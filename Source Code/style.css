@@ -179,9 +179,12 @@ label {
 .item-container {
   flex: 1;
   height: auto;
-  overflow-y: scroll;
+  overflow-y: hidden;
+  /* Disable manual scroll, allow JS scroll */
   position: relative;
   -ms-overflow-style: none;
+  touch-action: none;
+  /* Disable touch scroll */
 }
 
 .item-container::-webkit-scrollbar {

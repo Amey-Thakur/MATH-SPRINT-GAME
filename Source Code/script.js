@@ -380,7 +380,23 @@ function select(guessedTrue) {
     }
 
     // Add player guess to array
-    return guessedTrue ? playerGuessArray.push('true') : playerGuessArray.push('false');
+    guessedTrue ? playerGuessArray.push('true') : playerGuessArray.push('false');
+
+    // Check if game is complete
+    if (playerGuessArray.length === questionAmount) {
+        clearInterval(timer);
+        // Calculate Score Logic here if previously present, or just show page
+        equationsArray.forEach((equation, index) => {
+            if (equation.evaluated === playerGuessArray[index]) {
+                // Correct
+            } else {
+                penaltyTime += 0.5; // Add penalty
+            }
+        });
+
+        finalTime = timePlayed + penaltyTime + 0; // Ensure number
+        showScorePage();
+    }
 }
 
 // Display Game Page

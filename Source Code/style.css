@@ -389,10 +389,14 @@ button:active {
 }
 
 /* Countdown Page ---------------------- */
+/* Countdown Page ---------------------- */
 .countdown {
-  margin-top: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
   font-size: 100px;
-  text-align: center;
   user-select: none;
   cursor: pointer;
   color: var(--primary-color);
@@ -400,6 +404,12 @@ button:active {
   text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.2);
   /* Added depth */
   font-weight: bold;
+}
+
+.selected-item h1 {
+  color: white !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  transition: color 0.1s ease;
 }
 
 /* Score Page ------------------------ */

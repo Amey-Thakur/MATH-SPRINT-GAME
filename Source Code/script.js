@@ -301,13 +301,13 @@ function select(guessedTrue) {
     itemContainer.scroll({ top: valueY, behavior: 'smooth' });
 
     // Toggle Text Highlight
-    const equationElements = document.querySelectorAll('.item h1');
-    if (equationElements[currentEquationIndex]) {
-        equationElements[currentEquationIndex].classList.remove('selected-text');
+    const itemElements = document.querySelectorAll('.item');
+    if (itemElements[currentEquationIndex]) {
+        itemElements[currentEquationIndex].classList.remove('selected-item');
     }
     currentEquationIndex++;
-    if (equationElements[currentEquationIndex]) {
-        equationElements[currentEquationIndex].classList.add('selected-text');
+    if (itemElements[currentEquationIndex]) {
+        itemElements[currentEquationIndex].classList.add('selected-item');
     }
 
     // Add player guess to array
@@ -338,6 +338,7 @@ function createEquations() {
     // Set amount of wrong equations
     const wrongEquations = questionAmount - correctEquations;
     // Loop through, generate correct equations
+    currentEquationIndex = 0; // Reset for new game
     for (let i = 0; i < correctEquations; i++) {
         firstNumber = getRandomInt(9);
         secondNumber = getRandomInt(9);
@@ -428,10 +429,15 @@ function createEquations() {
 
 // Add Equations to DOM
 function equationsToDOM() {
-    equationsArray.forEach((equation) => {
+    equationsArray.forEach((equation, index) => {
         // Item
         const item = document.createElement('div');
         item.classList.add('item');
+
+        // Highlight first item
+        if (index === 0) {
+            item.classList.add('selected-item');
+        }
 
         // Equation Grid Container
         const grid = document.createElement('div');

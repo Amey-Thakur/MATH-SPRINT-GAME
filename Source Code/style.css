@@ -78,7 +78,7 @@ body {
 }
 
 .card {
-  margin: 10px 0;
+  margin: 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -151,7 +151,7 @@ label {
 }
 
 .selection-footer {
-  margin-top: auto;
+  /* margin-top: auto; Not needed if space-evenly is used */
 }
 
 /* Game Page -------------------------- */
@@ -210,7 +210,7 @@ label {
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-bottom: 20px;
+  /* margin-bottom removed */
 }
 
 .item-footer {
@@ -366,7 +366,7 @@ button:active {
 .footer {
   width: 100%;
   text-align: center;
-  margin-top: auto;
+  /* margin-top: auto; handled by gap and flex layout */
   padding: 10px 0;
   background: rgba(255, 255, 255, 0.8);
 }

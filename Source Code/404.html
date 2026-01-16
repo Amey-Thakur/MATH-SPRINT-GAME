@@ -60,24 +60,24 @@
         }
 
         .error-container {
-            max-width: 600px;
+            max-width: 550px;
             width: 90%;
             max-height: 85vh;
             /* Strict height limit */
             overflow-y: auto;
-            /* Allow scrolling */
-            padding: 30px;
+            /* Allow scrolling if absolutely needed */
+            padding: 25px;
+            /* Compact padding */
             position: relative;
             z-index: 2;
             margin: 20px;
-            /* Prevent sticking to edges */
 
             /* Glassmorphism */
             background: rgba(255, 255, 255, 0.75);
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.4);
-            border-radius: 25px;
+            border-radius: 20px;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 
             /* Hide Scrollbar */
@@ -92,75 +92,79 @@
         }
 
         .error-icon {
-            font-size: 5rem;
-            margin-bottom: 10px;
+            font-size: 3.5rem;
+            /* Reduced size */
+            margin-bottom: 5px;
             animation: bounce 2s infinite;
         }
 
         .error-code {
-            font-size: 7rem;
+            font-size: 5rem;
+            /* Significant reduction */
             font-weight: 900;
             line-height: 1;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             color: var(--primary-color);
             text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.2);
             animation: pulse 3s infinite ease-in-out;
         }
 
         .error-title {
-            font-size: 2.5rem;
+            font-size: 2rem;
+            /* Reduced size */
             font-weight: 700;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             color: #333;
         }
 
         .error-message {
-            font-size: 1.2rem;
+            font-size: 1rem;
+            /* Compact text */
             color: var(--text-secondary);
-            margin-bottom: 30px;
-            max-width: 500px;
+            margin-bottom: 20px;
+            max-width: 450px;
             margin-left: auto;
             margin-right: auto;
-            line-height: 1.6;
+            line-height: 1.4;
         }
 
         .equation {
             font-family: 'Play', sans-serif;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             background: rgba(2, 117, 216, 0.1);
             color: var(--primary-color);
-            padding: 10px 25px;
+            padding: 8px 20px;
             border-radius: 50px;
             display: inline-block;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             border: 1px solid rgba(2, 117, 216, 0.2);
         }
 
         .btn-home {
             background: var(--primary-color);
             color: white;
-            padding: 15px 40px;
+            padding: 12px 30px;
             border-radius: 50px;
             font-weight: 600;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             transition: all 0.3s;
             border: none;
             font-family: 'Play', sans-serif;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         .btn-home:hover {
-            transform: translateY(-3px);
+            transform: translateY(-2px);
             background: var(--accent-hover);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
             color: white;
         }
 
-        /* Removed bg-shapes as we have a full background image now */
+        /* Removed bg-shapes */
         .bg-shape {
             display: none;
         }
@@ -173,14 +177,16 @@
             }
 
             50% {
-                transform: translateY(-15px);
+                transform: translateY(-10px);
             }
         }
 
         .footer-simple {
-            margin-top: 50px;
-            font-size: 0.9rem;
+            margin-top: 30px;
+            /* Reduced margin */
+            font-size: 0.8rem;
             color: var(--text-secondary);
+            white-space: nowrap;
         }
 
         .footer-simple a {

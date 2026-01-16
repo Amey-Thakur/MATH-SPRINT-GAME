@@ -26,11 +26,12 @@
 
     <style>
         :root {
-            --bg-color: #1e1b4b;
-            --text-primary: #f5f3ff;
-            --text-secondary: #c4b5fd;
-            --accent-color: #8b5cf6;
-            --accent-hover: #a78bfa;
+            --primary-color: #0275d8;
+            --bg-color: #f0f8ff;
+            --text-primary: #333;
+            --text-secondary: #555;
+            --accent-color: #0275d8;
+            --accent-hover: #025aa5;
         }
 
         * {
@@ -40,7 +41,11 @@
         }
 
         body {
-            background: linear-gradient(135deg, #1e1b4b 0%, #0f0a1e 100%);
+            background: #f0f8ff;
+            background-image: url("img/background_sprint.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             color: var(--text-primary);
             font-family: 'Play', sans-serif;
             min-height: 100vh;
@@ -55,15 +60,23 @@
         }
 
         .error-container {
-            max-width: 700px;
-            padding: 40px;
+            max-width: 600px;
+            padding: 50px;
             position: relative;
             z-index: 2;
+
+            /* Glassmorphism */
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
         }
 
         .error-icon {
             font-size: 5rem;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             animation: bounce 2s infinite;
         }
 
@@ -72,23 +85,22 @@
             font-weight: 900;
             line-height: 1;
             margin-bottom: 20px;
-            background: linear-gradient(120deg, #8b5cf6, #c4b5fd);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--primary-color);
+            text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.2);
             animation: pulse 3s infinite ease-in-out;
         }
 
         .error-title {
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 15px;
+            color: #333;
         }
 
         .error-message {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             color: var(--text-secondary);
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             max-width: 500px;
             margin-left: auto;
             margin-right: auto;
@@ -96,19 +108,21 @@
         }
 
         .equation {
-            font-family: monospace;
-            font-size: 1.3rem;
-            background: rgba(139, 92, 246, 0.2);
-            padding: 10px 20px;
-            border-radius: 10px;
+            font-family: 'Play', sans-serif;
+            font-size: 1.5rem;
+            background: rgba(2, 117, 216, 0.1);
+            color: var(--primary-color);
+            padding: 10px 25px;
+            border-radius: 50px;
             display: inline-block;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(2, 117, 216, 0.2);
         }
 
         .btn-home {
-            background: var(--accent-color);
+            background: var(--primary-color);
             color: white;
-            padding: 14px 35px;
+            padding: 15px 40px;
             border-radius: 50px;
             font-weight: 600;
             text-decoration: none;
@@ -118,64 +132,20 @@
             transition: all 0.3s;
             border: none;
             font-family: 'Play', sans-serif;
-            font-size: 1rem;
+            font-size: 1.2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         .btn-home:hover {
             transform: translateY(-3px);
             background: var(--accent-hover);
-            box-shadow: 0 15px 30px rgba(139, 92, 246, 0.4);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
             color: white;
         }
 
+        /* Removed bg-shapes as we have a full background image now */
         .bg-shape {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.3;
-            z-index: 1;
-            animation: float 20s infinite alternate;
-        }
-
-        .shape-1 {
-            width: 300px;
-            height: 300px;
-            background: #8b5cf6;
-            top: -80px;
-            left: -80px;
-        }
-
-        .shape-2 {
-            width: 250px;
-            height: 250px;
-            background: #a78bfa;
-            bottom: -50px;
-            right: -50px;
-            animation-delay: -5s;
-        }
-
-        @keyframes float {
-            0% {
-                transform: translate(0, 0) scale(1);
-            }
-
-            100% {
-                transform: translate(30px, 50px) scale(1.1);
-            }
-        }
-
-        @keyframes pulse {
-
-            0%,
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-
-            50% {
-                opacity: 0.9;
-                transform: scale(0.98);
-            }
+            display: none;
         }
 
         @keyframes bounce {

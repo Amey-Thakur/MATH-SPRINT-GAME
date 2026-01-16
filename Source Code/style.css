@@ -38,6 +38,7 @@ body {
   overflow: hidden;
   display: flex;
   justify-content: center;
+  align-items: center;
   /* Anti-Select Protection */
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -52,11 +53,14 @@ body {
   border: 1px solid black;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
   width: 530px;
-  height: 750px;
+  max-width: 95%;
+  height: auto;
+  max-height: 98vh;
   position: relative;
   background: rgba(255, 255, 255, 0.5);
   user-select: none;
-  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -73,8 +77,13 @@ body {
 }
 
 .card {
-  margin: 5px auto 10px;
-  height: 600px;
+  margin: 0 auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  /* Important for nested flex scroll */
+  width: 100%;
 }
 
 /* Splash Page -------------------- */
@@ -90,13 +99,13 @@ input[type="radio"] {
 
 .selection-container {
   position: relative;
-  top: 65px;
+  top: 20px;
 }
 
 .radio-container {
   width: 90%;
   height: 75px;
-  margin: 25px;
+  margin: 15px auto;
   cursor: pointer;
   border: 2px solid black;
   border-radius: 5px;
@@ -135,7 +144,7 @@ label {
 }
 
 .selection-footer {
-  top: 134px;
+  margin-top: auto;
 }
 
 /* Game Page -------------------------- */
@@ -150,7 +159,8 @@ label {
 }
 
 .item-container {
-  height: 552px;
+  flex: 1;
+  height: auto;
   overflow-y: scroll;
   position: relative;
   -ms-overflow-style: none;
@@ -341,4 +351,20 @@ button:active {
   .best-score {
     left: 232px;
   }
+}
+
+/* Footer ----------------------------- */
+.footer {
+  width: 100%;
+  text-align: center;
+  margin-top: auto;
+  padding: 10px 0;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.footer h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+  font-weight: normal;
 }

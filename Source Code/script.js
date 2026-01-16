@@ -176,16 +176,20 @@ function scoresToDOM() {
         case '99': bestScoreIndex = 3; break;
     }
 
-    // Set Text Content
-    // baseTimeEl is now used for Best Time
-    if (bestScoreArray[bestScoreIndex]) {
-        baseTimeEl.textContent = `${bestScoreArray[bestScoreIndex].bestScore}s`;
-    } else {
-        baseTimeEl.textContent = '0.0s';
-    }
+    // Best Time (Robust Display)
+    const bestTimeEl = document.querySelector('.best-time');
+    if (bestTimeEl) {
+        // Check if a score exists at this index
+        const hasBestScore = bestScoreArray[bestScoreIndex] && bestScoreArray[bestScoreIndex].bestScore;
 
-    penaltyTimeEl.textContent = `+${penaltyTime.toFixed(1)}s`;
-    finalTimeEl.textContent = `${finalTimeDisplay}s`;
+        if (hasBestScore) {
+            bestTimeEl.textContent = `${bestScoreArray[bestScoreIndex].bestScore}s`;
+        } else {
+            bestTimeEl.textContent = '0.0s';
+        }
+    } else {
+        console.error('Best Time Element not found in DOM');
+    }
 
     updateBestScore();
     // Scroll to the Top, go to Score Page

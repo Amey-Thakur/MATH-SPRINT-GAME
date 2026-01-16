@@ -1131,10 +1131,7 @@ body.loaded .premium-loader {
 
   50% {
     transform: scale(1.1);
-    background: var(--success) !important;
-    color: white !important;
     box-shadow: 0 0 30px var(--success);
-    border-color: var(--success);
   }
 
   100% {
@@ -1146,14 +1143,12 @@ body.loaded .premium-loader {
 @keyframes flashRed {
   0% {
     transform: translateX(0);
+    box-shadow: 0 0 0 0 rgba(231, 29, 54, 0);
   }
 
   25% {
     transform: translateX(-5px);
-    background: var(--danger) !important;
-    color: white !important;
     box-shadow: 0 0 30px var(--danger);
-    border-color: var(--danger);
   }
 
   50% {
@@ -1166,13 +1161,22 @@ body.loaded .premium-loader {
 
   100% {
     transform: translateX(0);
+    box-shadow: 0 0 0 0 rgba(231, 29, 54, 0);
   }
 }
 
 .btn-success-flash {
+  /* Force color change via class */
+  background: var(--success) !important;
+  color: white !important;
+  border-color: var(--success) !important;
   animation: flashGreen 0.4s ease-out forwards;
 }
 
 .btn-error-flash {
+  /* Force color change via class */
+  background: var(--danger) !important;
+  color: white !important;
+  border-color: var(--danger) !important;
   animation: flashRed 0.4s ease-in-out forwards;
 }

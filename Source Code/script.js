@@ -350,6 +350,12 @@ function select(guessedTrue) {
         } else {
             wrongCount++;
             wrongScoreEl.textContent = wrongCount;
+
+            // Trigger Penalty Animation on Timer
+            const timerDisplay = document.getElementById('timer-display');
+            timerDisplay.classList.remove('penalty-flash');
+            void timerDisplay.offsetWidth; // Trigger reflow
+            timerDisplay.classList.add('penalty-flash');
         }
     }
 

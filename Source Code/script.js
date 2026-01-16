@@ -158,12 +158,16 @@ function playAgain() {
 // Show Score Page
 // Show Score Page
 function showScorePage() {
-    // Show Play Again and Share buttons immediately
-    playAgainBtn.hidden = false;
-    if (shareBtn) shareBtn.hidden = false;
-
-    gamePage.hidden = true;
+    // Show Play Again Button after 1 second? No, instant now, but let's handle animation
+    // Initial State: Hero Reveal
+    scorePage.classList.add('score-reveal');
     scorePage.hidden = false;
+    gamePage.hidden = true;
+
+    // Trigger Animation Sequence
+    setTimeout(() => {
+        scorePage.classList.remove('score-reveal');
+    }, 1000); // Hold the hero moment for 1 second
 }
 
 // Generate Image & Share (Download)

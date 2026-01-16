@@ -654,17 +654,45 @@ button:active {
   color: var(--success);
 }
 
+/* Score Page Animation States */
+.score-container {
+  transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.stat-box {
+  transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.5s ease;
+}
+
 .score-footer {
-  width: 100%;
-  height: auto;
-  padding: 20px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 25px;
-  /* Better separation */
-  margin-top: auto;
-  margin-bottom: 30px;
+  transition: opacity 0.5s ease 0.3s, transform 0.5s ease 0.3s;
+}
+
+/* Initial "Hero" State */
+.score-reveal .base-time-box {
+  transform: scale(1.6) translateY(120px);
+  z-index: 100;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  background: white;
+  /* Ensure visibility over others */
+  border-color: var(--primary-color);
+}
+
+.score-reveal .penalty-box,
+.score-reveal .best-box {
+  opacity: 0;
+  transform: translateY(20px) scale(0.8);
+}
+
+.score-reveal .score-footer {
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+}
+
+.score-reveal .title {
+  opacity: 0;
+  transform: translateY(-20px);
+}
 }
 
 /* Score Page Buttons */

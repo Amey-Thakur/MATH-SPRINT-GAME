@@ -877,38 +877,41 @@ button:active {
   color: var(--primary-color);
   text-decoration: none;
   font-weight: bold;
-  padding: 4px 10px;
-  background: rgba(10, 132, 255, 0.05);
-  border: 1px solid rgba(10, 132, 255, 0.1);
-  border-radius: 6px;
+  padding: 4px 12px;
+  background: rgba(10, 132, 255, 0.08);
+  border: 1px solid rgba(10, 132, 255, 0.15);
+  border-radius: 8px;
   transition: all 0.3s ease;
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Play', sans-serif;
+  font-size: 14px;
 }
 
 .footer a:hover {
   background: var(--primary-color);
   color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(10, 132, 255, 0.2);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(10, 132, 255, 0.15);
 }
 
 .footer-intro {
   text-transform: uppercase;
-  font-size: 10px;
-  letter-spacing: 3px;
-  color: #888;
-  font-weight: 700;
-  margin-right: 5px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #777;
+  font-weight: bold;
+  margin-right: 8px;
+  font-family: 'Play', sans-serif;
 }
 
 .footer-year {
-  font-family: 'Courier New', monospace;
-  /* Tech feel */
+  font-family: 'Play', sans-serif;
   font-weight: bold;
-  opacity: 0.7;
+  opacity: 0.8;
   font-size: 14px;
-  border-left: 2px solid #ddd;
-  padding-left: 10px;
+  border-left: 1px solid #ccc;
+  padding-left: 12px;
+  margin-left: 10px;
+  color: #555;
 }
 
 /* =========================================

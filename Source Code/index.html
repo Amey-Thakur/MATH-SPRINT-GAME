@@ -179,111 +179,82 @@
             </div>
         </div>
 
-        <!-- The Masterpiece Share Card (Ultimate Promotion) -->
+        <!-- The Unified Masterpiece Share Card (Glassmorphic Theme) -->
         <div id="share-card"
-            style="position: absolute; top: -9999px; left: -9999px; width: 480px; padding: 50px; background: #0b0b12; color: white; border-radius: 32px; font-family: 'Outfit', 'Play', sans-serif; text-align: center; border: 1px solid rgba(255,255,255,0.08); overflow: hidden;">
-
-            <!-- Atmospheric Glows -->
-            <div
-                style="position: absolute; top: -100px; left: -100px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(10, 132, 255, 0.15) 0%, transparent 70%); pointer-events: none;">
-            </div>
-            <div
-                style="position: absolute; bottom: -100px; right: -100px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(148, 226, 213, 0.1) 0%, transparent 70%); pointer-events: none;">
-            </div>
+            style="position: absolute; top: -9999px; left: -9999px; width: 500px; padding: 50px; background: rgba(255, 255, 255, 0.95); color: #333; border-radius: 30px; font-family: 'Play', sans-serif; text-align: center; border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: 0 20px 50px rgba(0,0,0,0.1);">
 
             <!-- Header Section -->
-            <div style="margin-bottom: 40px; position: relative;">
-                <div
-                    style="display: flex; align-items: center; justify-content: center; gap: 15px; margin-bottom: 8px;">
-                    <span
-                        style="background: rgba(10, 132, 255, 0.2); color: #0a84ff; padding: 4px 12px; border-radius: 12px; font-size: 10px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; border: 1px solid rgba(10, 132, 255, 0.3);">Global
-                        Ranking</span>
-                </div>
+            <div style="margin-bottom: 35px;">
                 <h1
-                    style="margin: 0; font-size: 28px; letter-spacing: 3px; font-weight: 800; color: white; text-transform: uppercase;">
+                    style="margin: 0; font-size: 32px; letter-spacing: 2px; font-weight: 800; color: dodgerblue; text-transform: uppercase;">
                     MATH SPRINT</h1>
-                <div style="font-size: 12px; color: #6e6e73; letter-spacing: 1px; margin-top: 5px;">Pushing the limits
-                    of mental math.</div>
+                <div style="font-size: 14px; color: #666; letter-spacing: 1px; margin-top: 5px; font-weight: bold;">
+                    Pushing the limits of mental math.</div>
             </div>
 
-            <!-- Hero Score Area -->
+            <!-- Score Area -->
             <div
-                style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); padding: 40px 20px; border-radius: 24px; margin-bottom: 35px; backdrop-filter: blur(10px);">
+                style="background: rgba(30, 144, 255, 0.05); border: 2px solid rgba(30, 144, 255, 0.1); padding: 40px 20px; border-radius: 25px; margin-bottom: 30px;">
                 <div
-                    style="font-size: 11px; color: #8e8e93; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 12px; font-weight: 600;">
-                    Performance Score</div>
+                    style="font-size: 12px; color: #888; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 10px; font-weight: 700;">
+                    Final Sprint Time</div>
                 <div id="share-time-value"
-                    style="font-size: 72px; font-weight: 900; color: white; line-height: 1; margin-bottom: 15px; text-shadow: 0 10px 40px rgba(0,0,0,0.5);">
-                    0.0s</div>
-                <div
-                    style="display: inline-flex; align-items: center; gap: 8px; background: rgba(148, 226, 213, 0.1); color: #94e2d5; padding: 6px 16px; border-radius: 20px; font-size: 14px; font-weight: bold; border: 1px solid rgba(148, 226, 213, 0.2);">
-                    <span>LEVEL CLEARED</span> <span style="opacity: 0.5;">|</span> <span>RANK S+</span>
+                    style="font-size: 80px; font-weight: 900; color: #222; line-height: 1; margin-bottom: 5px;">0.0s
                 </div>
             </div>
 
             <!-- Stats Bar -->
-            <div style="display: flex; gap: 20px; margin-bottom: 45px;">
-                <div style="flex: 1; text-align: center;">
+            <div style="display: flex; gap: 20px; margin-bottom: 40px; justify-content: center;">
+                <div
+                    style="background: white; padding: 15px 25px; border-radius: 15px; border: 1px solid #eee; flex: 1;">
                     <div
-                        style="font-size: 11px; color: #6e6e73; text-transform: uppercase; margin-bottom: 6px; letter-spacing: 1px;">
-                        Raw Speed</div>
-                    <div id="share-base" style="font-size: 20px; font-weight: 700; color: white;">0.0s</div>
+                        style="font-size: 11px; color: #999; text-transform: uppercase; margin-bottom: 5px; letter-spacing: 1px;">
+                        Base Time</div>
+                    <div id="share-base" style="font-size: 22px; font-weight: 700; color: #444;">0.0s</div>
                 </div>
-                <div style="width: 1px; background: rgba(255,255,255,0.1);"></div>
-                <div style="flex: 1; text-align: center;">
+                <div
+                    style="background: white; padding: 15px 25px; border-radius: 15px; border: 1px solid #eee; flex: 1;">
                     <div
-                        style="font-size: 11px; color: #6e6e73; text-transform: uppercase; margin-bottom: 6px; letter-spacing: 1px;">
-                        Accuracy Tax</div>
-                    <div id="share-penalty" style="font-size: 20px; font-weight: 700; color: #ff453a;">+0.0s</div>
+                        style="font-size: 11px; color: #999; text-transform: uppercase; margin-bottom: 5px; letter-spacing: 1px;">
+                        Penalty</div>
+                    <div id="share-penalty" style="font-size: 22px; font-weight: 700; color: #ff4757;">+0.0s</div>
                 </div>
             </div>
 
-            <!-- Creator Spotlight (Promotion Section) -->
-            <div style="position: relative; padding-top: 35px; border-top: 1px dashed rgba(255,255,255,0.15);">
+            <!-- Creator Spotlight -->
+            <div style="padding-top: 30px; border-top: 2px solid #f0f0f0;">
                 <div
-                    style="font-size: 11px; color: #8e8e93; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 20px; font-weight: 600;">
+                    style="font-size: 12px; color: #888; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 20px; font-weight: 700;">
                     A Collaborative Masterpiece By</div>
 
-                <div style="display: flex; justify-content: center; gap: 15px; margin-bottom: 25px;">
-                    <!-- Creator 1 -->
-                    <div style="text-align: center;">
-                        <div
-                            style="padding: 12px 24px; background: white; color: #000; border-radius: 12px; font-weight: 800; font-size: 15px; box-shadow: 0 10px 20px rgba(255,255,255,0.1);">
-                            Amey Thakur</div>
-                        <div
-                            style="font-size: 9px; color: #0a84ff; font-weight: bold; margin-top: 8px; text-transform: uppercase;">
-                            Lead Developer</div>
-                    </div>
-                    <!-- Creator 2 -->
-                    <div style="text-align: center;">
-                        <div
-                            style="padding: 12px 24px; background: rgba(255,255,255,0.05); color: #fff; border-radius: 12px; font-weight: 800; font-size: 15px; border: 1px solid rgba(255,255,255,0.2);">
-                            Mega Satish</div>
-                        <div
-                            style="font-size: 9px; color: #94e2d5; font-weight: bold; margin-top: 8px; text-transform: uppercase;">
-                            UX Designer</div>
-                    </div>
+                <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 25px;">
+                    <div
+                        style="padding: 12px 25px; background: dodgerblue; color: white; border-radius: 15px; font-weight: 800; font-size: 16px; box-shadow: 0 10px 20px rgba(30, 144, 255, 0.2);">
+                        Amey Thakur</div>
+                    <div
+                        style="padding: 12px 25px; background: dodgerblue; color: white; border-radius: 15px; font-weight: 800; font-size: 16px; box-shadow: 0 10px 20px rgba(30, 144, 255, 0.2);">
+                        Mega Satish</div>
                 </div>
 
                 <div style="margin-top: 10px;">
-                    <div style="font-size: 12px; color: #0a84ff; font-weight: 800; letter-spacing: 1px;">JOIN THE SPRINT
-                    </div>
-                    <div style="font-size: 10px; color: #6e6e73; margin-top: 4px;">
+                    <div
+                        style="font-size: 12px; color: dodgerblue; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;">
+                        GitHub Project &bull; Math Sprint Game</div>
+                    <div style="font-size: 11px; color: #999; margin-top: 4px; font-family: monospace;">
                         amey-thakur.github.io/MATH-SPRINT-GAME</div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Authorship Footer -->
-    <div class="footer">
-        <canvas id="footer-canvas"></canvas>
-        <h3><span class="footer-intro">Created by</span> <a href="https://github.com/Amey-Thakur" target="_blank"
-                rel="noopener noreferrer" class="link-left">Amey
-                Thakur</a> <span class="math-operator">&</span> <a href="https://github.com/msatmod" target="_blank"
-                rel="noopener noreferrer" class="link-right">Mega
-                Satish</a> <span class="footer-year">2022</span></h3>
-    </div>
+        <!-- Authorship Footer -->
+        <div class="footer">
+            <canvas id="footer-canvas"></canvas>
+            <h3><span class="footer-intro">Created by</span> <a href="https://github.com/Amey-Thakur" target="_blank"
+                    rel="noopener noreferrer" class="link-left">Amey
+                    Thakur</a> <span class="math-operator">&</span> <a href="https://github.com/msatmod" target="_blank"
+                    rel="noopener noreferrer" class="link-right">Mega
+                    Satish</a> <span class="footer-year">2022</span></h3>
+        </div>
     </div>
     <!-- Script -->
     <script src="shuffle.js"></script>

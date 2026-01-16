@@ -488,19 +488,38 @@ function populateGamePage() {
     scrollSurface.appendChild(bottomSpacer);
 }
 
+// Sound Synthesis
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+function playBeep(freq = 600, type = 'sine') {
+    if (audioCtx.state === 'suspended') audioCtx.resume();
+    const osc = audioCtx.createOscillator();
+    const gain = audioCtx.createGain();
+    osc.type = type;
+    osc.frequency.value = freq;
+    osc.connect(gain);
+    gain.connect(audioCtx.destination);
+    osc.start();
+    gain.gain.exponentialRampToValueAtTime(0.00001, audioCtx.currentTime + 0.1);
+    osc.stop(audioCtx.currentTime + 0.1);
+}
+
 // Displays 3, 2, 1 GO!
 function countdownStart() {
-    let count = 5;
+    let count = 3;
     countdown.textContent = count;
+    playBeep(600); // Beep for initial number
+
     const timeCountDown = setInterval(() => {
         count--;
         if (count === 0) {
             countdown.textContent = 'GO!';
+            playBeep(1200, 'square'); // High pitch for GO
         } else if (count === -1) {
             showGamePage();
             clearInterval(timeCountDown);
         } else {
             countdown.textContent = count;
+            playBeep(600); // Beep for other numbers
         }
     }, 1000);
 }

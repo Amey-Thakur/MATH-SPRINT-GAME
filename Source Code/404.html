@@ -180,13 +180,18 @@
             }
         }
 
+        /* Flexbox Footer for robust wrapping */
         .footer-simple {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            /* Space between text and authors */
             margin-top: 25px;
-            /* Tighter footer margin */
             font-size: 0.8rem;
             color: var(--text-secondary);
-            line-height: 1.4;
-            /* Allow natural wrapping */
+            line-height: 1.5;
         }
 
         .footer-simple a {
@@ -200,7 +205,7 @@
         }
 
         /* Mobile Optimization */
-        @media (max-width: 480px) {
+        @media (max-width: 600px) {
             .error-container {
                 padding: 25px;
                 width: 95%;
@@ -226,17 +231,10 @@
                 padding: 12px 30px;
             }
 
-            /* Force authors to new line on mobile */
-            .mobile-break {
-                display: none;
-            }
-
-            @media (max-width: 600px) {
-                .mobile-break {
-                    display: block;
-                    content: "";
-                    margin-top: 5px;
-                }
+            /* Force column stack on mobile */
+            .footer-simple {
+                flex-direction: column;
+                gap: 2px;
             }
         }
     </style>
@@ -261,12 +259,11 @@
         </a>
 
         <div class="footer-simple">
-            <p>2022 &copy; All Rights Reserved | Designed and Developed by <br class="mobile-break">
-                <span class="authors-block">
-                    <a href="https://github.com/Amey-Thakur" target="_blank" rel="noopener noreferrer">Amey Thakur</a> &
-                    <a href="https://github.com/msatmod" target="_blank" rel="noopener noreferrer">Mega Satish</a>
-                </span>
-            </p>
+            <span>2022 &copy; All Rights Reserved | Designed and Developed by </span>
+            <span class="authors-block">
+                <a href="https://github.com/Amey-Thakur" target="_blank" rel="noopener noreferrer">Amey Thakur</a> &
+                <a href="https://github.com/msatmod" target="_blank" rel="noopener noreferrer">Mega Satish</a>
+            </span>
         </div>
     </div>
 

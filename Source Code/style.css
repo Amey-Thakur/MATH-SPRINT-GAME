@@ -465,35 +465,6 @@ button:active {
   }
 }
 
-font-size: 1.2rem;
-}
-
-.countdown {
-  margin-top: 60%;
-}
-
-.selection-container {
-  top: 100px;
-}
-
-.radio-container {
-  width: 93%;
-  margin: 15px;
-}
-
-label {
-  font-size: 1.7rem;
-}
-
-.best-score {
-  font-size: 1rem;
-  left: 245px;
-}
-
-.selection-footer {
-  top: 183px;
-}
-}
 
 /* Media Query: iPhone */
 @media screen and (max-width: 376px) {

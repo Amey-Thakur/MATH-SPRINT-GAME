@@ -33,6 +33,26 @@
 </head>
 
 <body>
+    <!-- Premium Loading Screen -->
+    <div class="premium-loader">
+        <img src="favicon.png" style="width: 80px; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.1)); opacity: 1;">
+        <div class="loader-bar">
+            <div class="loader-fill"></div>
+        </div>
+        <p
+            style="font-family: 'Outfit', sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: #8e8e93; margin: 0;">
+            Initializing Game...</p>
+    </div>
+
+    <!-- Script to trigger load finish -->
+    <script>
+        window.addEventListener('load', function () {
+            // Wait for animation to finish significantly
+            setTimeout(function () {
+                document.body.classList.add('loaded');
+            }, 2000);
+        });
+    </script>
     <div class="game-container">
         <!-- Header -->
         <div class="header">

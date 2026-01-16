@@ -339,11 +339,29 @@ function equationsToDOM() {
         // Item
         const item = document.createElement('div');
         item.classList.add('item');
-        // Equation Text
-        const equationText = document.createElement('h1');
-        equationText.textContent = equation.value;
+
+        // Equation Grid Container
+        const grid = document.createElement('div');
+        grid.classList.add('equation-grid');
+
+        // Split equation string by spaces to get parts: [Num1, Op, Num2, =, Result]
+        // Note: Equation values are constructed as "A op B = C" or "A op B" (for wrong variants sometimes? check logic)
+        // My wrong logic was: `equation = ${firstNumber} x ${secondNumber}` (without = result possibly?)
+        // Let's check logic:
+        // Correct: `${a} op ${b} = ${c}` -> 5 parts
+        // Wrong: `${equation} = ${c}` where equation is `${a} op ${b}` -> `${a} op ${b} = ${c}` -> 5 parts
+        // So safe to assume 5 parts usually.
+
+        const parts = equation.value.split(' ');
+
+        parts.forEach(part => {
+            const span = document.createElement('h1');
+            span.textContent = part;
+            grid.appendChild(span);
+        });
+
         // Append
-        item.appendChild(equationText);
+        item.appendChild(grid);
         itemContainer.appendChild(item);
     });
 }

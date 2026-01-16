@@ -386,8 +386,8 @@ function createParticle(type, startEl, endEl) {
         particle.textContent = '+';
         particle.classList.add('particle-plus');
     } else {
-        particle.textContent = '−';
-        particle.classList.add('particle-minus');
+        particle.textContent = '×';
+        particle.classList.add('particle-multiply');
     }
 
     // Get Positions
@@ -444,23 +444,23 @@ if (footer && leftLink && rightLink && operator) {
     });
 
     // -------------------------------------
-    // HOVER MEGA (SUBTRACTION -> AMEY SHRINKS)
+    // HOVER MEGA (MULTIPLICATION -> AMEY BOOSTS)
     // -------------------------------------
     rightLink.addEventListener('mouseenter', () => {
-        operator.textContent = '−';
-        operator.classList.add('operator-minus');
-        leftLink.classList.add('scale-down');
+        operator.textContent = '×';
+        operator.classList.add('operator-multiply');
+        leftLink.classList.add('scale-boost');
 
         // Rapid fire particles
         particleInterval = setInterval(() => {
-            createParticle('minus', rightLink, leftLink);
+            createParticle('multiply', rightLink, leftLink);
         }, 100);
     });
 
     rightLink.addEventListener('mouseleave', () => {
         operator.textContent = '&';
-        operator.classList.remove('operator-minus');
-        leftLink.classList.remove('scale-down');
+        operator.classList.remove('operator-multiply');
+        leftLink.classList.remove('scale-boost');
         clearInterval(particleInterval);
     });
 }

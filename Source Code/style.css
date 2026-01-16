@@ -231,6 +231,13 @@ label {
   display: none;
 }
 
+.scroll-surface {
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  width: 100%;
+  will-change: transform;
+  /* Optimize for GPU */
+}
+
 .item {
   display: flex;
   align-items: center;

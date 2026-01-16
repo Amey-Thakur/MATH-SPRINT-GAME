@@ -238,10 +238,12 @@ button {
   color: white;
   border: none;
   outline: none;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 button:hover {
   filter: brightness(110%);
+  transform: scale(1.02);
 }
 
 button:active {

@@ -845,3 +845,47 @@ if (canvas && ctx) {
 
 // On Load
 getSavedBestScores();
+
+// Footer Operator Animation
+function cycleFooterOperator() {
+    const operatorEl = document.querySelector('.math-operator');
+    if (!operatorEl) return;
+
+    const states = [
+        { text: '&', color: 'var(--primary-color)' },
+        { text: '+', color: 'var(--success)' },      // Green
+        { text: '-', color: 'var(--danger)' },       // Red
+        { text: '×', color: '#8b5cf6' },             // Purple
+        { text: '÷', color: '#f59e0b' }              // Orange
+    ];
+
+    let index = 0;
+
+    setInterval(() => {
+        index = (index + 1) % states.length;
+        const state = states[index];
+
+        // Animate Out
+        operatorEl.style.transform = 'scale(0.5) rotate(180deg)';
+        operatorEl.style.opacity = '0';
+
+        setTimeout(() => {
+            // Change Content
+            operatorEl.textContent = state.text;
+            operatorEl.style.color = state.color;
+
+            // Animate In
+            operatorEl.style.transform = 'scale(1.2) rotate(0deg)';
+            operatorEl.style.opacity = '1';
+
+            // Settle
+            setTimeout(() => {
+                operatorEl.style.transform = 'scale(1)';
+            }, 200);
+        }, 250); // Wait for half transition
+
+    }, 2000); // Change every 2 seconds
+}
+
+// Start Animation
+document.addEventListener('DOMContentLoaded', cycleFooterOperator);

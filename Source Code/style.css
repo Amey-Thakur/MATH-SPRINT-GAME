@@ -78,7 +78,7 @@ body {
 }
 
 .card {
-  margin: 0 auto;
+  margin: 10px 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -92,60 +92,57 @@ body {
 }
 
 /* Splash Page -------------------- */
-input[type="radio"] {
-  opacity: 0;
-  width: 100%;
-  height: 75px;
-  position: relative;
-  top: -40px;
-  cursor: pointer;
-  z-index: 2;
-}
-
+/* Splash Page -------------------- */
 .selection-container {
-  position: relative;
-  top: 10px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .radio-container {
   width: 90%;
   height: 65px;
-  margin: 10px auto;
+  margin: 8px auto;
   cursor: pointer;
   border: 2px solid black;
   border-radius: 5px;
-}
-
-label {
   position: relative;
-  top: 12px;
-  left: 20px;
-  font-size: 26px;
-}
-
-.selected-label {
-  background: var(--select-color);
-  color: white;
-}
-
-.best-score {
-  position: relative;
-  top: -88px;
-  left: 330px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  font-size: 18px;
-  max-width: fit-content;
+  align-items: center;
 }
 
-.best-score span {
+input[type="radio"] {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  z-index: 2;
   margin: 0;
 }
 
+label {
+  font-size: 26px;
+  margin-left: 20px;
+}
+
+.best-score {
+  position: absolute;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+  font-size: 16px;
+  pointer-events: none;
+  height: 100%;
+}
+
 .best-score span:last-child {
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .selection-footer {

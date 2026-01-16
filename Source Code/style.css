@@ -99,17 +99,51 @@ body {
   width: 100%;
 }
 
+/* Game Stats Bar */
+.game-stats-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 10px auto 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
 .timer-display {
   background: rgba(0, 0, 0, 0.1);
   color: black;
   font-size: 26px;
   font-weight: bold;
-  margin: 10px auto 0 auto;
   padding: 5px 20px;
   border-radius: 20px;
   width: fit-content;
   text-align: center;
   font-family: 'Play', sans-serif;
+  margin: 0;
+  /* Clear margin since flex wrapper handles it */
+}
+
+.score-pill {
+  background: rgba(0, 0, 0, 0.05);
+  /* Softer glass */
+  font-size: 22px;
+  font-weight: bold;
+  padding: 5px 15px;
+  border-radius: 15px;
+  font-family: 'Play', sans-serif;
+  min-width: 40px;
+  text-align: center;
+}
+
+.right-score {
+  color: var(--success);
+  border: 1px solid rgba(46, 204, 113, 0.3);
+}
+
+.wrong-score {
+  color: var(--danger);
+  border: 1px solid rgba(231, 29, 54, 0.3);
 }
 
 #start-form {

@@ -424,10 +424,6 @@ button:active {
   .game-container {
     margin-top: 35px;
   }
-
-  .selected-item {
-    top: 380px;
-  }
 }
 
 /* Media Query: Large Smartphone (Vertical) */
@@ -436,10 +432,6 @@ button:active {
     width: 100%;
     margin-top: 0;
     border: none;
-  }
-
-  .selected-item {
-    top: 345px;
   }
 
   .header {
@@ -471,6 +463,36 @@ button:active {
   .selection-footer {
     top: 183px;
   }
+}
+
+font-size: 1.2rem;
+}
+
+.countdown {
+  margin-top: 60%;
+}
+
+.selection-container {
+  top: 100px;
+}
+
+.radio-container {
+  width: 93%;
+  margin: 15px;
+}
+
+label {
+  font-size: 1.7rem;
+}
+
+.best-score {
+  font-size: 1rem;
+  left: 245px;
+}
+
+.selection-footer {
+  top: 183px;
+}
 }
 
 /* Media Query: iPhone */

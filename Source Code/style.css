@@ -190,10 +190,10 @@ label {
 
 .item {
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
   height: 80px;
-  margin: 0 50px;
+  width: 100%;
   user-select: none;
 }
 

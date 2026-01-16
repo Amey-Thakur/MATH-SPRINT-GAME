@@ -227,9 +227,16 @@
             }
 
             /* Force authors to new line on mobile */
-            .authors-block {
-                display: block;
-                margin-top: 5px;
+            .mobile-break {
+                display: none;
+            }
+
+            @media (max-width: 600px) {
+                .mobile-break {
+                    display: block;
+                    content: "";
+                    margin-top: 5px;
+                }
             }
         }
     </style>
@@ -254,7 +261,7 @@
         </a>
 
         <div class="footer-simple">
-            <p>2022 &copy; All Rights Reserved | Designed and Developed by
+            <p>2022 &copy; All Rights Reserved | Designed and Developed by <br class="mobile-break">
                 <span class="authors-block">
                     <a href="https://github.com/Amey-Thakur" target="_blank" rel="noopener noreferrer">Amey Thakur</a> &
                     <a href="https://github.com/msatmod" target="_blank" rel="noopener noreferrer">Mega Satish</a>

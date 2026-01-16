@@ -516,10 +516,10 @@ button:active {
 .stats-grid {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
   /* More breathing room */
-  width: 98%;
-  margin-top: 10px;
+  width: 92%;
+  margin: 10px auto;
   flex-wrap: wrap;
 }
 

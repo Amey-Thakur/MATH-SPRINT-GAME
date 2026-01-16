@@ -196,10 +196,14 @@ function checkTime() {
     }
 }
 
+// Timer Display
+const timerDisplay = document.querySelector('.timer-display');
+
 // Add a tenth of a second to timePlayed
 function addTime() {
     timePlayed += 0.1;
     checkTime();
+    timerDisplay.textContent = `Time: ${timePlayed.toFixed(1)}s`;
 }
 
 // Start timer when game page is clicked
@@ -208,6 +212,7 @@ function startTimer() {
     timePlayed = 0;
     penaltyTime = 0;
     finalTime = 0;
+    timerDisplay.textContent = 'Time: 0.0s';
     timer = setInterval(addTime, 100);
     gamePage.removeEventListener('click', startTimer);
 }

@@ -248,9 +248,48 @@ button:active {
   transform: scale(0.99);
 }
 
+/* Button Animations */
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-5px) rotate(-5deg);
+  }
+
+  50% {
+    transform: translateX(5px) rotate(5deg);
+  }
+
+  75% {
+    transform: translateX(-5px) rotate(-5deg);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse-green {
+  0% {
+    box-shadow: 0 0 0 0 rgba(15, 158, 2, 0.7);
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgba(15, 158, 2, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(15, 158, 2, 0);
+  }
+}
+
 .wrong,
 .right {
   width: 40%;
+  position: relative;
+  overflow: hidden;
 }
 
 .wrong {
@@ -258,8 +297,24 @@ button:active {
   margin-right: 25px;
 }
 
+.wrong:hover {
+  animation: shake 0.4s cubic-bezier(.36, .07, .19, .97) both;
+  box-shadow: 0 0 15px var(--danger);
+}
+
 .right {
   background: var(--success);
+}
+
+.right:hover {
+  animation: pulse-green 1.5s infinite;
+  box-shadow: 0 0 15px var(--success);
+  transform: scale(1.05);
+}
+
+.right:active {
+  transform: scale(0.95);
+  box-shadow: none;
 }
 
 .start,

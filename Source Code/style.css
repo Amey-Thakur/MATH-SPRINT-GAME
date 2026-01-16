@@ -362,20 +362,35 @@ button:active {
   width: 40%;
   position: relative;
   overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  /* Subtle glass base */
+  border: 2px solid;
+  /* Defined by color below */
+  backdrop-filter: blur(5px);
+  transition: all 0.2s ease;
 }
 
 .wrong {
-  background: var(--danger);
+  border-color: var(--danger);
+  box-shadow: 0 0 10px rgba(231, 29, 54, 0.2);
   margin-right: 25px;
 }
 
 .wrong:hover {
+  background: var(--danger);
   animation: shake 0.4s cubic-bezier(.36, .07, .19, .97) both;
-  box-shadow: 0 0 15px var(--danger);
+  box-shadow: 0 0 20px var(--danger);
 }
 
 .right {
+  border-color: var(--success);
+  box-shadow: 0 0 10px rgba(46, 204, 113, 0.2);
+}
+
+.right:hover {
   background: var(--success);
+  animation: pulse-green 1s infinite;
+  box-shadow: 0 0 20px var(--success);
 }
 
 .right:hover {

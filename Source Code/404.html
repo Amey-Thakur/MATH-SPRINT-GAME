@@ -185,7 +185,8 @@
             /* Tighter footer margin */
             font-size: 0.8rem;
             color: var(--text-secondary);
-            white-space: nowrap;
+            line-height: 1.4;
+            /* Allow natural wrapping */
         }
 
         .footer-simple a {
@@ -196,6 +197,34 @@
 
         .footer-simple a:hover {
             text-decoration: underline;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 480px) {
+            .error-container {
+                padding: 25px;
+                width: 95%;
+            }
+
+            .error-icon {
+                font-size: 3.5rem;
+            }
+
+            .error-code {
+                font-size: 4.5rem;
+            }
+
+            .error-title {
+                font-size: 1.8rem;
+            }
+
+            .error-message {
+                font-size: 0.95rem;
+            }
+
+            .btn-home {
+                padding: 12px 30px;
+            }
         }
     </style>
 </head>

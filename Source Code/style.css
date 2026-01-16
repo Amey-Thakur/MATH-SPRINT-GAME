@@ -87,6 +87,19 @@ body {
   width: 100%;
 }
 
+.timer-display {
+  background: rgba(0, 0, 0, 0.1);
+  color: black;
+  font-size: 26px;
+  font-weight: bold;
+  margin: 10px auto 0 auto;
+  padding: 5px 20px;
+  border-radius: 20px;
+  width: fit-content;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
 #start-form {
   height: 100%;
   display: flex;

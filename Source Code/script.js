@@ -167,23 +167,49 @@ function showScorePage() {
 
 // Generate Image & Share (Download)
 function shareScore() {
-    const shareCard = document.getElementById('share-card');
-    const shareTime = document.getElementById('share-time-value');
-    const shareBase = document.getElementById('share-base');
-    const sharePenalty = document.getElementById('share-penalty');
+    console.log("Share button clicked!");
+    try {
+        const shareCard = document.getElementById('share-card');
+        const shareTime = document.getElementById('share-time-value');
+        const shareBase = document.getElementById('share-base');
+        const sharePenalty = document.getElementById('share-penalty');
 
-    // Populate Data
-    shareTime.textContent = `${finalTime.toFixed(1)}s`;
-    shareBase.textContent = `${timePlayed.toFixed(1)}s`;
-    sharePenalty.textContent = `+${penaltyTime.toFixed(1)}s`;
+        if (!shareCard || !shareTime) {
+            console.error("Share elements missing!");
+            return;
+        }
 
-    // Generate Canvas
-    html2canvas(shareCard).then(canvas => {
-        const link = document.createElement('a');
-        link.download = `MathSprint-Score-${finalTime.toFixed(1)}s.png`;
-        link.href = canvas.toDataURL();
-        link.click();
-    });
+        // Populate Data
+        shareTime.textContent = `${finalTime.toFixed(1)}s`;
+        shareBase.textContent = `${timePlayed.toFixed(1)}s`;
+        sharePenalty.textContent = `+${penaltyTime.toFixed(1)}s`;
+        console.log("Data populated. Starting html2canvas...");
+
+        // Check availability
+        if (typeof html2canvas === 'undefined') {
+            alert("Error: html2canvas library not loaded. Check internet connection.");
+            return;
+        }
+
+        // Generate Canvas
+        html2canvas(shareCard, {
+            scale: 2, // High resolution
+            backgroundColor: null, // Transparent background if needed
+            logging: true // Enable logs for html2canvas
+        }).then(canvas => {
+            console.log("Canvas generated!");
+            const link = document.createElement('a');
+            link.download = `MathSprint-Score-${finalTime.toFixed(1)}s.png`;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }).catch(err => {
+            console.error("html2canvas error:", err);
+            alert("Error generating image: " + err.message);
+        });
+    } catch (error) {
+        console.error("Share Logic Error:", error);
+        alert("Something went wrong! " + error.message);
+    }
 }
 
 // Format & Display Time in DOM

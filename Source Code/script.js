@@ -216,7 +216,7 @@ function startTimer() {
 function select(guessedTrue) {
     // Scroll 80 pixels
     valueY += 80;
-    itemContainer.scroll(0, valueY);
+    itemContainer.scroll({ top: valueY, behavior: 'smooth' });
     // Add player guess to array
     return guessedTrue ? playerGuessArray.push('true') : playerGuessArray.push('false');
 }

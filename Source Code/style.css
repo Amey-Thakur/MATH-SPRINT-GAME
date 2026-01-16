@@ -115,6 +115,18 @@ body {
   position: relative;
   display: flex;
   align-items: center;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.radio-container:hover {
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.02);
+}
+
+.selected-label {
+  background: var(--select-color);
+  color: white;
 }
 
 input[type="radio"] {

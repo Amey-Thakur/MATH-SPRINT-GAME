@@ -912,9 +912,11 @@ button:active {
 .footer-year {
   font-family: 'Play', sans-serif;
   font-weight: bold;
-  opacity: 0.6;
+  opacity: 1;
+  /* Match Created By brightness */
   font-size: 15px;
-  border-left: 2px solid rgba(0, 0, 0, 0.1);
+  border-left: 2px solid rgba(0, 0, 0, 0.2);
+  /* Brighter line */
   padding-left: 15px;
   margin-left: 10px;
   color: #666;

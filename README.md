@@ -75,8 +75,8 @@ The development of this interface was guided by core **Human-Machine Interaction
 | **Audio Immersion** | Interactive **Apple-style pulse auditory feedback** for countdowns and scoring. |
 
 > [!NOTE]
-> ### Performance Analytics: High-Fidelity Share Cards
-> We have developed a dedicated canvas export engine for the game. After completing a round, users can generate a high-resolution summary of their performance metrics. These assets are digitally signed by **Amey & Mega** and feature a minimalist mathematical watermark, enabling the professional sharing of results across digital platforms.
+> ### System Enhancements: Auditory Feedback & High-Fidelity Analytics
+> We have integrated a specialized auditory layer that provides responsive, Apple-style pulse feedback to enhance the player's pacing and focus. Complementing this immersion, the application features an integrated canvas export engine that generates high-resolution performance summaries, with each digital asset being professionally attributed to **Amey & Mega**.
 
 ### Tech Stack
 - **Languages**: HTML5, CSS3, JavaScript (ES6+)

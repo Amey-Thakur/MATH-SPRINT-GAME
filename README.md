@@ -76,7 +76,7 @@ The development of this interface was guided by core **Human-Machine Interaction
 
 > [!NOTE]
 > ### Interactive Polish: Immersive Auditory Feedback
-> We have integrated a responsive auditory layer into the gameplay loop to reinforce the player's pacing and focus. These acoustic signals were designed to provide instantaneous cognitive feedback, transforming each round into a high-intensity mental sprint within a polished digital environment. Complementing this experience, the application includes a high-fidelity performance summary feature, with each shareable analytics asset digitally signed by **Amey & Mega**.
+> We have integrated a responsive auditory layer into the gameplay loop to reinforce the player’s pacing and focus. These acoustic signals are designed to provide instantaneous cognitive feedback, transforming each round into a high-intensity mental sprint within a refined digital environment. Complementing this experience, the application includes a high-fidelity performance summary feature, with each shareable scorecard digitally signed by **Amey & Mega**.
 
 ### Tech Stack
 - **Languages**: HTML5, CSS3, JavaScript (ES6+)

@@ -75,8 +75,8 @@ The development of this interface was guided by core **Human-Machine Interaction
 | **Audio Immersion** | Interactive **Apple-style pulse auditory feedback** for countdowns and scoring. |
 
 > [!NOTE]
-> ### 📊 Premium Analytics: High-Fidelity Share Cards
-> We've implemented a state-of-the-art **Canvas Export Engine**! Upon completing a round, players can generate a custom-branded, high-resolution share card. These assets are digitally signed **by Amey & Mega** and feature a minimalist mathematical watermark, perfect for showcasing your mental math prowess on social platforms.
+> ### Performance Analytics: High-Fidelity Share Cards
+> We have developed a dedicated canvas export engine for the game. After completing a round, users can generate a high-resolution summary of their performance metrics. These assets are digitally signed by the authors and feature a minimalist mathematical watermark, enabling the professional sharing of results across digital platforms.
 
 ### Tech Stack
 - **Languages**: HTML5, CSS3, JavaScript (ES6+)

@@ -76,7 +76,7 @@ The development of this interface was guided by core **Human-Machine Interaction
 
 > [!NOTE]
 > ### Performance Analytics: High-Fidelity Share Cards
-> We have developed a dedicated canvas export engine for the game. After completing a round, users can generate a high-resolution summary of their performance metrics. These assets are digitally signed by the authors and feature a minimalist mathematical watermark, enabling the professional sharing of results across digital platforms.
+> We have developed a dedicated canvas export engine for the game. After completing a round, users can generate a high-resolution summary of their performance metrics. These assets are digitally signed by **Amey and Mega** and feature a minimalist mathematical watermark, enabling the professional sharing of results across digital platforms.
 
 ### Tech Stack
 - **Languages**: HTML5, CSS3, JavaScript (ES6+)

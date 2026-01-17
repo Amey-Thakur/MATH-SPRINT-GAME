@@ -95,9 +95,9 @@ MATH-SPRINT-GAME/
 ├── docs/                            # Technical Documentation
 │   └── SPECIFICATION.md             # Architecture & Design Specification
 │
-├── Mega/                                                         # Archival Attribution Assets
-│   ├── Filly.jpg                                                 # Companion (Filly)
-│   └── Mega.png                                                  # Author Profile Image (Mega Satish)
+├── Mega/                            # Archival Attribution Assets
+│   ├── Filly.jpg                    # Companion (Filly)
+│   └── Mega.png                     # Author Profile Image (Mega Satish)
 │
 ├── screenshots/                     # Application Screenshots
 │   ├── main-menu.png                # Start Screen & Question Selection

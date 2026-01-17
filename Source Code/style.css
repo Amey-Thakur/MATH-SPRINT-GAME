@@ -738,41 +738,260 @@ button:active {
 }
 
 /* Media Query: Large Smartphone (Vertical) */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .game-container {
     width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    border-radius: 0;
     margin-top: 0;
     border: none;
+    box-shadow: none;
   }
 
   .header {
-    font-size: 1.2rem;
+    height: 60px;
+  }
+
+  .header h1 {
+    font-size: 28px;
+    /* Significantly reduced for mobile */
   }
 
   .countdown {
-    margin-top: 60%;
+    margin-top: 0;
+    /* Center vertically properly */
+    font-size: 80px;
   }
 
+  /* Selection Page Adjustments */
   .selection-container {
-    top: 100px;
+    justify-content: center;
+    gap: 15px;
   }
 
   .radio-container {
-    width: 93%;
-    margin: 15px;
+    width: 95%;
+    height: 70px;
+    /* Slightly compact */
+    margin: 5px auto;
   }
 
   label {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
+    margin-left: 15px;
   }
 
   .best-score {
-    font-size: 1rem;
-    left: 245px;
+    position: relative;
+    /* Remove absolute to prevent overlap */
+    right: auto;
+    width: auto;
+    margin-right: 15px;
+    margin-left: auto;
+    /* Push to right */
+    text-align: right;
+  }
+
+  .best-score span:first-child {
+    font-size: 12px;
+  }
+
+  .best-score span:last-child {
+    font-size: 18px;
   }
 
   .selection-footer {
-    top: 183px;
+    height: 80px;
+  }
+
+  /* Game Page Adjustments */
+  .item h1 {
+    font-size: 24px;
+    /* Smaller equations */
+  }
+
+  .equation-grid {
+    gap: 2px;
+  }
+
+  .timer-display,
+  .score-pill {
+    font-size: 18px;
+    padding: 4px 12px;
+  }
+
+  .item-footer button {
+    font-size: 20px;
+  }
+
+  /* Score Page Adjustments */
+  .final-time {
+    font-size: 4rem;
+    /* Fit screen */
+  }
+
+  .score-container .title {
+    font-size: 1.8rem;
+  }
+
+  .stats-grid {
+    gap: 15px;
+    width: 95%;
+  }
+
+  .stat-box {
+    min-width: 100px;
+    padding: 10px;
+  }
+
+  .base-time,
+  .best-time,
+  .penalty-time {
+    font-size: 1.5rem;
+  }
+
+  .score-footer {
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .score-btn {
+    width: 80%;
+    height: 45px;
+    font-size: 1.2rem;
+    margin-left: 0;
+    /* Reset margin for share btn */
+  }
+}
+
+/* Media Query: Landscape Mode (Mobile) */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .game-container {
+    height: 100vh;
+    margin-top: 0;
+    flex-direction: row;
+    /* Horizontal layout */
+    flex-wrap: wrap;
+    /* Allow wrapping if really needed */
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    /* Allow scrolling if content is too tall */
+  }
+
+  .header {
+    width: 100%;
+    height: 40px;
+    /* Slim header */
+  }
+
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .card {
+    height: auto;
+    /* Let content dictate height */
+    justify-content: center;
+  }
+
+  .selection-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    top: 0;
+    gap: 10px;
+    padding-top: 10px;
+  }
+
+  .radio-container {
+    width: 45%;
+    /* 2x2 grid */
+    height: 50px;
+    margin: 5px;
+  }
+
+  label {
+    font-size: 1.2rem;
+  }
+
+  .best-score {
+    font-size: 0.8rem;
+  }
+
+  .selection-footer,
+  .item-footer {
+    height: 50px;
+  }
+
+  button {
+    height: 40px;
+    font-size: 18px;
+  }
+
+  /* Game Page compact */
+  .game-content-wrapper {
+    height: calc(100vh - 100px);
+    /* Leave room for header/footer */
+  }
+
+  .item {
+    height: 50px;
+  }
+
+  .item h1 {
+    font-size: 20px;
+  }
+
+  .selected-item {
+    top: 150px;
+    /* Adjust highlight position */
+    height: 50px;
+  }
+
+  .score-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+/* Media Query: Small Phones (320px width) */
+@media screen and (max-width: 350px) {
+  .header h1 {
+    font-size: 22px;
+  }
+
+  .best-score {
+    display: none;
+    /* Hide best score on tiny screens to prevent clutter */
+  }
+
+  .radio-container {
+    height: 60px;
+  }
+
+  label {
+    font-size: 1.2rem;
+  }
+
+  .final-time {
+    font-size: 3rem;
+  }
+
+  .stats-grid {
+    gap: 5px;
+  }
+
+  .stat-box {
+    min-width: 80px;
+    padding: 5px;
+  }
+
+  .base-time,
+  .best-time,
+  .penalty-time {
+    font-size: 1.2rem;
   }
 }
 

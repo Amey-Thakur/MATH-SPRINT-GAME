@@ -81,7 +81,7 @@ The development of this interface was guided by core **Human-Machine Interaction
 ### Tech Stack
 - **Languages**: HTML5, CSS3, JavaScript (ES6+)
 - **Logic**: Vanilla JS (Advanced DOM Manipulation & Web Audio API)
-- **Imaging**: **html2canvas** (State-of-the-art canvas capture engine)
+- **Imaging**: **html2canvas** (Custom high-fidelity capture engine)
 - **UI System**: Premium Glassmorphic Design (Custom Vanilla CSS3)
 - **Deployment**: GitHub Actions (Staging & Continuous Delivery Workflow)
 - **Hosting**: GitHub Pages

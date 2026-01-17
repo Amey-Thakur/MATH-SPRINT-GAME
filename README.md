@@ -104,7 +104,8 @@ MATH-SPRINT-GAME/
 │   ├── game-page.png                # Primary Gameplay Interface
 │   ├── game-feedback.png            # Visual Validation Feedback
 │   ├── score-page.png               # Performance Results Overview
-│   └── share-card.png               # Premium Score Analytics Asset
+│   ├── share-card.png               # Premium Score Analytics Asset
+│   └── gallery/                     # High-Resolution Social Assets
 │
 ├── Source Code/                     # Primary Application Layer
 │   ├── style.css                    # Game Styling

@@ -67,16 +67,22 @@ The development of this interface was guided by core **Human-Machine Interaction
 
 | Feature | Description |
 |---------|-------------|
-| **Interactive Gameplay** | Rapid-fire equation challenges with immediate feedback. |
-| **Score Tracking** | Persistent high score system using Web LocalStorage. |
-| **HCI Principles** | Clean interface design focusing on minimize cognitive load and reaction time. |
-| **Responsive Design** | Adapts to various screen sizes for gaming on desktop or tablet. |
-| **Visual Polish** | Smooth animations and clear visual cues for game states. |
+| **Interactive Gameplay** | Rapid-fire equation challenges with immediate **visual feedback** (Correct/Wrong). |
+| **Premium Analytics** | **High-Fidelity PDF-Ready Share Cards** generated instantly for performance sharing. |
+| **Score Tracking** | Persistent high score system using Web LocalStorage with **penalty-integrated logic**. |
+| **HCI Principles** | Clean interface design focusing on **Minimizing Cognitive Load** and reaction time. |
+| **Adaptive Performance** | Fully responsive design with **GPU-accelerated animations** and smooth scrolling. |
+| **Audio Immersion** | Interactive **Apple-style pulse auditory feedback** for countdowns and scoring. |
+
+> [!NOTE]
+> ### 📊 Premium Analytics: High-Fidelity Share Cards
+> We've implemented a state-of-the-art **Canvas Export Engine**! Upon completing a round, players can generate a custom-branded, high-resolution share card. These assets are digitally signed **by Amey & Mega** and feature a minimalist mathematical watermark, perfect for showcasing your mental math prowess on social platforms.
 
 ### Tech Stack
-- **Languages**: HTML5, CSS3, JavaScript
-- **Framework**: Vanilla JS (DOM Manipulation)
-- **Deployment**: GitHub Actions (Staging Workflow)
+- **Languages**: HTML5, CSS3, JavaScript (ES6+)
+- **Logic**: Vanilla JS (Advanced DOM Manipulation & Web Audio API)
+- **Imaging**: **html2canvas** (State-of-the-art canvas capture engine)
+- **Deployment**: GitHub Actions (Staging & Continuous Delivery Workflow)
 - **Hosting**: GitHub Pages
 
 ---

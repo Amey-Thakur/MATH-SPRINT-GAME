@@ -751,11 +751,21 @@ button:active {
 
   .header {
     height: 60px;
+    padding: 0 10px;
+    /* Add some padding */
   }
 
   .header h1 {
-    font-size: 28px;
-    /* Significantly reduced for mobile */
+    font-size: 20px;
+    /* Further reduced from 28px to prevent wrapping */
+    letter-spacing: 1px;
+    /* Reduce spacing */
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    /* Force single line if possible */
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .countdown {
@@ -766,43 +776,47 @@ button:active {
 
   /* Selection Page Adjustments */
   .selection-container {
-    justify-content: center;
-    gap: 15px;
+    justify-content: flex-start;
+    /* Start from top */
+    gap: 10px;
+    padding-top: 10px;
+    overflow-y: auto;
+    /* Allow scroll if needed */
   }
 
   .radio-container {
     width: 95%;
-    height: 70px;
-    /* Slightly compact */
+    height: 55px;
+    /* Compact height */
     margin: 5px auto;
   }
 
   label {
-    font-size: 1.4rem;
-    margin-left: 15px;
+    font-size: 1.3rem;
   }
 
   .best-score {
-    position: relative;
-    /* Remove absolute to prevent overlap */
-    right: auto;
-    width: auto;
-    margin-right: 15px;
-    margin-left: auto;
-    /* Push to right */
-    text-align: right;
+    margin-right: 10px;
   }
 
   .best-score span:first-child {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .best-score span:last-child {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .selection-footer {
-    height: 80px;
+    height: 70px;
+    margin-top: auto;
+    /* Push to bottom if space allows, or sit naturally */
+    padding-bottom: 10px;
+  }
+
+  .start {
+    height: 50px;
+    /* Ensure button is reachable */
   }
 
   /* Game Page Adjustments */

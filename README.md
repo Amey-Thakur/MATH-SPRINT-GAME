@@ -72,11 +72,11 @@ The development of this interface was guided by core **Human-Machine Interaction
 | **Score Tracking** | Persistent high score system using Web LocalStorage with **penalty-integrated logic**. |
 | **HCI Principles** | Clean interface design focusing on **Minimizing Cognitive Load** and reaction time. |
 | **Adaptive Performance** | Fully responsive design with **GPU-accelerated animations** and smooth scrolling. |
-| **Audio Immersion** | Interactive **Apple-style pulse auditory feedback** for countdowns and scoring. |
+| **Audio Immersion** | Responsive auditory feedback layers for countdowns and scoring states. |
 
 > [!NOTE]
-> ### System Enhancements: Auditory Feedback & High-Fidelity Analytics
-> We have integrated a specialized auditory layer that provides responsive, Apple-style pulse feedback to enhance the player's pacing and focus. Complementing this immersion, the application features an integrated canvas export engine that generates high-resolution performance summaries, with each digital asset being professionally attributed to **Amey & Mega**.
+> ### Interactive Polish: Immersive Auditory Feedback
+> We have integrated a responsive auditory layer into the gameplay loop to reinforce the player's pacing and focus. These acoustic signals were designed to provide instantaneous cognitive feedback, transforming each round into a high-intensity mental sprint within a polished digital environment. Complementing this experience, the application includes a high-fidelity performance summary feature, with each shareable analytics asset digitally signed by **Amey & Mega**.
 
 ### Tech Stack
 - **Languages**: HTML5, CSS3, JavaScript (ES6+)

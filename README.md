@@ -117,7 +117,7 @@ MATH-SPRINT-GAME/
 ├── Source Code/                     # Primary Application Layer
 │   ├── style.css                    # Game Styling
 │   ├── script.js                    # Game Logic & State Management
-│   ├── icon.png                     # Application Icon
+│   ├── favicon.png                  # Application Icon
 │   └── index.html                   # Game Interface
 │
 ├── .gitattributes                   # Git configuration

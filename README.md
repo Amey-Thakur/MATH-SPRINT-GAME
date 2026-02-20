@@ -184,6 +184,13 @@ MATH-SPRINT-GAME/
 2.  **Launch**:
     Open `Source Code/index.html` in your preferred browser.
 
+> [!TIP]
+> **Educational Gamification | Math Sprint Game**
+> 
+> Experience a high-fidelity web simulation of this competitive arithmetic platform, featuring a "Flash Card" visual metaphor and HMI-optimized feedback loops designed to enhance mental processing speed through gamified cognitive challenges.
+>
+> [**Launch Live Demo**](https://amey-thakur.github.io/MATH-SPRINT-GAME/)
+
 ---
 
 <!-- =========================================================================================
